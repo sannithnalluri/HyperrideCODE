@@ -1,0 +1,12 @@
+.Phone_nav{
+    display: none;
+}
+@media (max-width:420px) {
+    .Web_nav{
+        display: none;
+    }
+    .Phone_nav{
+        display: block;
+    }
+    
+}

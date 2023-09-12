@@ -1,0 +1,135 @@
+.hero_section{
+    display: flex;
+    background-color: rgb(225,23,21);
+    width: 100vw;
+    height: 100vh;
+   
+}
+.hero_Section_img{
+    flex: 1;
+    width: 30vw;
+   
+}
+.hero_Section_img img{
+    width: 35vw;
+    height: 95vh;
+    margin-left: 10vw;
+    margin-top: 5vh;
+   
+}
+.Date_picking_Section{
+    width: 40vw;
+    background-color: white;
+    margin-right: 10vw;
+    height: 70vh;
+    margin-top: 15vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+.logo_Container{
+    background-color: black;
+    height: 10vh;
+    width: 20vw;
+    margin-left: 9.5vw;
+    margin-top: 5vh;
+    box-shadow: 0px 5px 5px  rgb(44, 44, 44);
+    
+}
+.logo_Container img{
+    width: 17vw;
+    height: 5vh;
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+.PickUP_selection_section{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Date_picking_Section input{
+    width: 17vw;
+    height: 5vh;
+    font-size: larger;
+    border: 2px solid black;
+    margin-top: 2vh;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+}
+.Date_picking_Section input ::placeholder{
+    font-size: 18px;
+}
+.Pickup_Time input{
+    width: 10vw;
+    border-radius: 5px;
+}
+.Plan_selection_input h2{
+    margin-top: 4vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Plan_selection_input select{
+    width: 17vw;
+    height: 5vh;
+    border: 2px black solid;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    margin-top: 2vh;
+}
+.Plan_selection_input{
+    margin-left: 3.75vw;
+}
+.Show_avail_Button{
+    margin-left: 15vw;
+}
+.Show_avail_Button button{
+    padding: 10px;
+    width: 15vw;
+    margin-top: 15vh;
+    background-color: rgb(225,23,21);
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 3px 1px 1px 1px rgb(70, 70, 70);
+}
+
+@media (max-width:420px) {
+
+  .hero_Section_img{
+    display: none;
+  }  
+  .Date_picking_Section{
+    width: 90vw;
+    height: 90vh;
+    margin: 1vh 5vw;
+  }
+  .logo_Container{
+    width: 80vw;
+    height: 8vh;
+    margin: 4vh 4vw;
+  }
+  .logo_Container img{
+    width: 70vw;}
+.PickUP_selection_section{
+    display: block;
+} 
+.PickUP_selection_section h2{
+    margin: 2vh 5vw;
+} 
+.PickUP_selection_section input{
+    width: 70vw;
+    margin: 1vh 5vw;
+}
+.Plan_selection_input select{
+    width: 70vw;
+}
+.Plan_selection_input option{
+    width: 70vw;
+}
+.Show_avail_Button button{
+    width: 80vw;
+    margin: 10vh 1vw;
+}
+.Show_avail_Button{
+    margin: 2vw;
+}
+}

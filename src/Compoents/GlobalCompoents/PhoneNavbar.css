@@ -1,0 +1,47 @@
+.Mobiel_Navbar{
+    background-color: rgb(225,23,21);
+}
+.Mobile_logo img{
+    width: 70px;
+    height: 50px;
+}
+.Mobile_logo{
+    padding: 10px;
+}
+.Mobile_navbar{
+    display: flex;
+}
+.Mobile_Menu{
+    margin-top: 2vh;
+    margin-left: 58vw;
+    display: flex;
+}
+.Mobile_navlink{
+    background-color: rgb(225,23,21);
+ 
+    height: 90vh;
+
+}
+.Mobile_navlink ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.Mobile_navlink ul{
+    padding-top: 5vh;
+    padding-left: 40vw;
+    list-style: none;
+    
+}
+.Mobile_navlink ul li{
+    margin-top:5vh ;
+}
+.locked-screen {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  

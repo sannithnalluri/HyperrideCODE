@@ -1,0 +1,30 @@
+ .web_navbar{
+    display: flex;
+    background-color: rgb(252, 22, 23);
+    position: fixed;
+    width: 100%;
+ }
+ .web_logo{
+    padding: 1vw;
+    padding-top: 1vh;
+    margin-left: 5vw;
+ }
+ .web_logo img{
+    width: 6rem;
+    height: 4rem;
+
+ }
+ .nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 50vw;
+    margin-top: 2vh;
+ }
+ .nav ul li{
+    padding: 10px;
+    margin: 1vh 1vw;
+ }
+ .nav ul li a{
+    text-decoration: none;
+color: white;
+ }
