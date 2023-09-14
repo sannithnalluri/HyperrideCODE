@@ -1,6 +1,12 @@
 import {React,useState} from 'react';
 import MainNavbar from '../GlobalCompoents/MainNavbar';
 import './Homepage.css';
+import Offers from './Offers';
+import Pricing from './Pricing';
+import CustomerReview from './CustomerReview';
+import Faq from './Faq';
+import ImageCarousel from './ImageCursol';
+import Footer from './Footer';
 const HomePage = () => {
     const currentDate = new Date();
 
@@ -24,6 +30,11 @@ const HomePage = () => {
           setSelectedTime(inputTime);
         }
       };
+
+      const [showbike,setshowbike] = useState(false)
+      const handleShowavailabe=()=>{
+        setshowbike(true)
+      }
     return (
         <div>
             <MainNavbar/>
@@ -68,10 +79,28 @@ const HomePage = () => {
                     </select>
                     </div>
                     <div className='Show_avail_Button'>
-                        <button >Show Available</button>
+                        <button onClick={handleShowavailabe} >Show Available</button>
                     </div>
                 </div>
             </div>
+            <div style={{display:showbike?'':'none'}} className='Display_Bike'>
+
+            <ImageCarousel/>
+            </div>
+            
+            <Offers/>
+            <div id='Pricing'>
+            <Pricing/>
+            </div>
+            
+            <CustomerReview/>
+            <div id='Faq'>
+            <Faq/>
+            </div>
+            <div>
+                <Footer/>
+            </div>
+            
         </div>
     );
 }

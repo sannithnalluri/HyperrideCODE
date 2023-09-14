@@ -1,0 +1,63 @@
+.Offer_page{
+    width: 80vw;
+    margin: 10vh 10vw;
+text-align: center;
+}
+.Offer_section{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Offer_1{
+    width: 15vw;
+    border: 2px black solid;
+    box-shadow: 2px 2px 2px  black;
+}
+.Offer_1:hover{
+    box-shadow: 2px 2px 2px 2px rgb(72, 72, 72);
+    
+}
+.Heading{
+    background-color: rgb(225,21,23);
+    height: 5vh;
+    padding: 15px;
+    color: white;
+}
+.Heading :hover{
+    background-color: rgb(220, 77, 79);
+}
+.Heading h1{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Offer_Content img{
+    width: 9vw;
+    height: 15vh;
+    margin-left: 2vh;
+}
+.Offer_Content{
+padding: 15px;
+}
+.Offer_Content h6{
+    font-size: 24px;
+}
+.Line{
+    background-color: rgb(225,21,23);
+    height: 2px;
+    width: 4vw;
+    margin-left: 38vw;
+}
+@media (max-width:420px) {
+
+.Offer_section{
+    display: block;
+}
+.Offer_1{
+    width: 80vw;
+    margin: 5vh 1vw;
+}
+.Offer_Content img{
+    width: 50vw;
+}
+}

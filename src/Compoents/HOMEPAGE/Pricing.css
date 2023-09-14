@@ -1,0 +1,51 @@
+.Pricing_container{
+    display: flex;
+    align-self: center;
+    margin-left: 20vw;
+
+}
+.Pricing{
+    margin-top: 10vh;
+    justify-content: space-between;
+    text-align: center;
+}
+.Pricing h1{
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Hourly{
+    border: 2px black solid;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+    margin: 3vh 5vw;
+    height: 35vh;
+}
+.Hourly:hover{
+    box-shadow:2px 2px 2px 2px rgb(83, 83, 83);
+
+}
+.Hourly h2{
+    font-size: 35px;
+    background-color: rgb(221,21,23);
+    color: white;
+    padding: 10px;
+    width: 20vw;
+}
+.Hourly h6{
+    font-size: 20px;
+    margin: 3vh 3vw;
+}
+.Pric_Line{
+    width: 4vw;
+    height: 2px;
+    background-color: rgb(221,21,23);
+    margin-left: 47vw;
+}
+@media (max-width:420px) {
+    .Pricing_container{
+    display: inline;
+    }
+    .Hourly h2{
+        width: 94%;
+    }
+}

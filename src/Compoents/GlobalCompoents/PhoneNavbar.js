@@ -2,6 +2,7 @@ import React, { useState,useEffect} from 'react';
 import { CgClose, CgMenu } from "react-icons/cg";
 import './PhoneNavbar.css';
 import {motion} from "framer-motion"
+import { Link } from 'react-router-dom';
 const PhoneNavbar = () => {
 
 
@@ -28,7 +29,8 @@ const PhoneNavbar = () => {
             <div className='Mobiel_Navbar'>
                 <div className='Mobile_navbar'>
                 <div className='Mobile_logo'>
-                    <img src={require('../Assests/Roundlogo.png')} alt='Company_logo'/>
+                    <Link to='/'> <img src={require('../Assests/Roundlogo.png')} alt='Company_logo'/></Link>
+                   
                 </div>
                     <div className='Mobile_Menu'>
         
@@ -57,10 +59,10 @@ const PhoneNavbar = () => {
            
             className='Mobile_navlink'>
                 <ul>
-                    <li><a href='#Home'>Home</a></li>
-                    <li><a href='Pricing'>Pricing</a></li>
-                    <li><a href='Faq'>Faq</a></li>
-                    <li><a href='Contactus'>Contact Us</a></li>
+                    <li><Link href='#Home'>Home</Link></li>
+                    <li><Link href='#Pricing'>Pricing</Link></li>
+                    <li><Link href='#Faq'>Faq</Link></li>
+                    <li><Link href='#Contactus'>Contact Us</Link></li>
                 </ul>
             </motion.div>
         </div>

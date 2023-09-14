@@ -1,0 +1,58 @@
+.Bike_page{
+    text-align: center;
+    margin: 15vh 5vw;
+}
+.item{
+    min-width: 17rem;
+    width: 33%;
+    padding: 20PX;
+    cursor: grab;
+    border: 2px rgb(32, 32, 32) solid;
+    margin: 5vh 2vw;
+    display: flex;
+}
+.item img{
+    width: 60%;
+    height: 100%;
+    pointer-events: none;
+}
+.inner_carusol{
+    display: flex;
+    margin-left: 10vw;
+    cursor: grab;
+    
+}
+.Carusol{
+    overflow: hidden;
+    max-width: 80vw;
+ 
+}
+.bike_book_button{
+    margin-top: 80%;
+}
+.bike_book_button button{
+    background-color: rgb(221,21,23);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black ;
+}
+.Features{
+    margin-top: 30%;
+    
+}
+.Features h6{
+    font-size: 10px;
+    padding: 2px;
+}
+@media (max-width:420px) {
+    .Carusol{
+        max-width: 100vw;
+    }
+    .Bike_page{
+        margin-left:0px ;
+    }
+    .inner_carusol{
+        margin-left: 0px;
+    }
+}

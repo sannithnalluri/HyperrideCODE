@@ -1,0 +1,46 @@
+.UserForm{
+    margin-left: 40vw;
+    padding: 10px;
+    max-width: 30vw;
+    border: 2px black solid;
+    margin-top: 10vh;
+}  
+.userinputpage{
+    padding-top: 15vh;
+}
+  /* Style the form elements */
+  label {
+    margin-bottom: 10px; /* Add spacing between label-input pairs */
+    font-weight: bold;
+  }
+  
+  input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px; /* Add spacing between input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ff5420;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Center the button */
+  button {
+    align-self: flex-end;
+  }
+  
+  /* Optional: Style the form header */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,26 @@
+/* ImageCarousel.css */
+.image-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-images {
+    display: flex;
+    width: 500%; /* Adjust the width based on the number of images */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-image {
+    min-width: 20%; /* Adjust the width based on the number of images */
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  .carousel-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  

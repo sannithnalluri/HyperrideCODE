@@ -1,0 +1,40 @@
+.booking_container{
+    padding-top: 15vh;
+    display: flex;
+}
+.Summary_Container{
+    margin-top: 40%;
+    border: 2px black solid;
+    padding: 30px;
+}
+.Summary_Container label{
+    font-size: 25px;
+    margin: 5vw 5vw;
+    padding: 5vh 0px;
+    margin-bottom: 4vh;
+}
+.Summary_Container h3{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.terms_and_condition input{
+    width: 20px;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.Payment_checkout{
+    margin-left: 40%;
+}
+@media (max-width:420px) {
+    .booking_container{
+        display: block;
+        padding-top: 5vh;
+    }
+    .booking_container img{
+        width: 90vw;
+    }
+    .Summary_Container{
+        margin-top: 10%;
+    }
+}

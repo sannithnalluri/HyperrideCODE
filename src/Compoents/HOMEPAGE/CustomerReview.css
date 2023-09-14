@@ -1,0 +1,48 @@
+.Customer_review h1{
+    text-align: center;
+}
+.rating_section{
+    display: flex;
+    margin-left: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+.Customer_Contianer{
+    display: flex;
+    margin-top: 10vh;
+}
+.Avatar{
+    border: 2px black solid;
+    width: 20vw;
+    height: 40vh;
+    padding: 10px;
+    margin-left: 20vw;
+    color: rgb(0, 0, 0);
+
+}
+.Avatorimg {
+    margin-left: 40%;
+}
+.Avatorimg img{
+    width: 80px;
+    height: 80px;
+}
+
+.Avatar h3{
+    text-align: center;
+}
+.Avatar p{
+    width: 90%;
+    padding: 10px;
+}
+@media (max-width:420px) {
+    .Customer_Contianer{
+        display: inline;
+    }
+    .Avatar{
+        width: 80vw;
+        margin: 10vh 7vw;
+    }
+    
+}

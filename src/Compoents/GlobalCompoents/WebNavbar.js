@@ -1,11 +1,12 @@
 import React from 'react';
 import './Webnavbar.css'
+import { Link } from 'react-router-dom';
 const WebNavbar = () => {
     return (
         <div>
             <div className='web_navbar'>
                 <div className='web_logo'>
-                    <img src={require('../Assests/Roundlogo.png')} alt='Company_logo'/>
+                    <Link><img src={require('../Assests/Roundlogo.png')} alt='Company_logo'/></Link>
                 </div>
                 <div className='nav'>
                     <ul>

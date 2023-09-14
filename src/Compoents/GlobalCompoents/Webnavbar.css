@@ -3,6 +3,7 @@
     background-color: rgb(252, 22, 23);
     position: fixed;
     width: 100%;
+    z-index: 1000;
  }
  .web_logo{
     padding: 1vw;
