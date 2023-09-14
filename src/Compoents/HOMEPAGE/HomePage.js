@@ -40,7 +40,7 @@ const HomePage = () => {
             <MainNavbar/>
             <div className='hero_section'>
                 <div className='hero_Section_img'>
-                <img  src={require('../Assests/mainscooty.png')} alt='hero_image'/>
+                <img  src={require('../Assests/mainscooty1.png')} alt='hero_image'/>
                 </div>
                 <div className='Date_picking_Section'>
                     <div className='logo_Container'>
