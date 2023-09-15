@@ -10,7 +10,7 @@ const WebNavbar = () => {
                 </div>
                 <div className='nav'>
                     <ul>
-                        <li><a href='#Home'>Home</a></li>
+                        <li><Link to='/'>Home</Link></li>
                         <li><a href='#Pricing'>Pricing</a></li>
                         <li><a href='#Faq'> Faq</a></li>
                         <li><a href='#Contact'>Contact Us</a></li>
