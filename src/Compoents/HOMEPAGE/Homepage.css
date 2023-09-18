@@ -91,7 +91,9 @@
     border-radius: 4px;
     box-shadow: 3px 1px 1px 1px rgb(70, 70, 70);
 }
-
+.Show_avail_Button button a{
+    color: white;
+}
 @media (max-width:420px) {
 
   .hero_Section_img{

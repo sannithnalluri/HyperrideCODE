@@ -11,10 +11,9 @@ const WebNavbar = () => {
                 <div className='nav'>
                     <ul>
                         <li><Link to='/'>Home</Link></li>
-                        <li><a href='#Pricing'>Pricing</a></li>
-                        <li><a href='#Faq'> Faq</a></li>
+                        <li><Link to='/AboutUs'>About Us</Link></li>
+                        <li><Link to='/Features'> Features</Link></li>
                         <li><a href='#Contact'>Contact Us</a></li>
-
                     </ul>
                 </div>
             </div>

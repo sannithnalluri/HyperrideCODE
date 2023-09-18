@@ -2,7 +2,14 @@
   padding: 0px;
   margin: 0px;
   font-family: 'Times New Roman', Times, serif;
+  scroll-behavior: smooth;
 }
 button{
   cursor: pointer;
+}
+@media (max-width:420px) {
+  .App{
+  max-width: 400px;
+  
+  }
 }

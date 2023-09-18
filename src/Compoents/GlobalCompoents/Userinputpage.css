@@ -1,9 +1,15 @@
 .UserForm{
-    margin-left: 40vw;
+    margin-left: 35vw;
     padding: 10px;
     max-width: 30vw;
     border: 2px black solid;
     margin-top: 10vh;
+    background-color: #fff;
+}
+.User_details_page{
+  background-image: url('../Assests/formbg.jpg');
+  background-size: cover;
+  height: 100vh;
 }  
 .userinputpage{
     padding-top: 15vh;
@@ -42,5 +48,17 @@
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
+  }
+  @media (max-width:720px) {
+    .UserForm{
+        margin-left: 0px;
+        margin-top: 1vh;
+        max-width: 80vw;
+    }
+    .userinputpage
+    {
+        padding-top: 2vh;
+    }
+    
   }
   

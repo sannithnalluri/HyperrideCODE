@@ -40,7 +40,7 @@ function UserDataForm() {
   };
 
   return (
-    <div >
+    <div className='User_details_page' >
         <MainNavbar/>    
          <div className='userinputpage'>
             <div className='UserForm'>

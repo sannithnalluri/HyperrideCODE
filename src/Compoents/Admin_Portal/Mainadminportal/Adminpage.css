@@ -68,6 +68,17 @@
   .Logout_btn{
     margin-left: 90%;
   }
+.Bike_details_portal ul{
+  display: flex;
+  list-style: none;
+}
+.Bike_details_portal ul li{
+  margin: 2px;
+}
+.Bike_details_portal ul li button{
+  background-color: white;
+  color: rgb(14, 173, 231);
+}
   @media (max-width: 768px) {
     .admin_nav {
       width: 100%; /* Take up the full width of the screen on mobile */
