@@ -21,7 +21,7 @@ const Bikebookingpage = () => {
   useEffect(() => {
     const fetchBikeDetails = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/get_bike_details?bikeId=${id}`);
+        const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/get_bike_details?bikeId=${id}`);
 
         if (response.ok) {
           const data = await response.json();
@@ -35,7 +35,7 @@ const Bikebookingpage = () => {
     fetchBikeDetails(); // Call the function inside useEffect
     const fetchbookingDetials = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/get_booking_data?pickuptime=${pickupdateandtime}&plan=${plan}`);
+        const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/get_booking_data?pickuptime=${pickupdateandtime}&plan=${plan}`);
 
         if (response.ok) {
           const data = await response.json();
@@ -59,7 +59,7 @@ const Bikebookingpage = () => {
   const Booknow=async ()=>{
     try{
       setbooking(true)
-      const response = await fetch(`http://127.0.0.1:8000/BookBike?pickuptime=${pickupdateandtime}&plan=${plan}&bike_id=${id}`)
+      const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/BookBike?pickuptime=${pickupdateandtime}&plan=${plan}&bike_id=${id}`)
      if(response.ok)
        alert('succesfully')
        const data = await response.json();

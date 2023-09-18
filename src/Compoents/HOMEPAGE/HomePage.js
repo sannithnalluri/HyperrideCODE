@@ -91,7 +91,7 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
      
-      const response = await fetch(`http://127.0.0.1:8000/Showavaible_bike?pickupdate=${selectedDate}&pickuptime=${selectedTime}&plan=2`); // Corrected the URL, added "http://"
+      const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/Showavaible_bike?pickupdate=${selectedDate}&pickuptime=${selectedTime}&plan=2`); // Corrected the URL, added "http://"
         
         if (response.ok) {
           const data = await response.json();
