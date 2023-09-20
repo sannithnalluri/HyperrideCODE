@@ -37,61 +37,68 @@ const HomePage = () => {
     const currentMinutes = String(currentDate.getMinutes()).padStart(2, '0');
     const currentSeconds = String(currentDate.getSeconds()).padStart(2,'0')
     const [selectedTime, setSelectedTime] = useState(`${currentHours}:${currentMinutes}:${currentSeconds}`);
-   
-   
-    const [showbike,setshowbike] = useState(false)
+
+    
+    //the state of the currentpage
+    const [isLoading,setloading] = useState(true)
+    const [bikedata,setBikedata] = useState([])
+    const[IsAvailable,setIsAvailable] = useState(false)
+   const [showbike,setshowbike] = useState(false)
+   const [selectedPlan, setSelectedPlan] = useState('None');
+   const [selectedDate, setSelectedDate] = useState('None');
+   const pickdateandtime = selectedDate+' '+selectedTime
+   const bikebookingdata = [selectedDate,selectedTime+selectedPlan]
+
+
+   //function to handle in the page
     const handleShowavailabe=()=>{
       setshowbike(true)
       fetchData();
-      sessionStorage.setItem('bikebookingdetials',bikebookingdata)
     }
-
-
     const handleTimeChange = (e) => {
-        const inputTime = e.target.value;
-        // Check if the input time is earlier than the minimum time
-        if (inputTime < `${currentHours}:${currentMinutes}`) {
-          setSelectedTime(`${currentHours}:${currentMinutes}:${currentSeconds}`);
-        } else {
-    
-          setSelectedTime(inputTime);
-        }
+      const inputTime = e.target.value;  
+            setSelectedTime(inputTime);
+       
       };
 
 
    
     //   store the seleed timeand date in the compent in the state and funtion to handle 
-      const [selectedPlan, setSelectedPlan] = useState('None');
+    
       const handleSelectChange = (event) => {
         setSelectedPlan(event.target.value);
       };
-
       // store the store the date
-      const [selectedDate, setSelectedDate] = useState('');
-
      const handleDateChange = (event) => {
     setSelectedDate(event.target.value);
   };
   
-    const [isLoading,setloading] = useState(true)
-    const [bikedata,setBikedata] = useState([])
-    const[IsAvailable,setIsAvailable] = useState(false)
-    const bikebookingdata = [selectedDate,selectedTime,selectedPlan]
+  
+   
   
     useEffect(() => {
       const checkAvailability = () => {
         if (selectedDate && selectedPlan !== 'None' &&selectedTime) {
           setIsAvailable(true);
+          const bookingdataofike  = [pickdateandtime,selectedPlan]
+          sessionStorage.setItem('bikebookingdetials',bookingdataofike)
         } else {
           setIsAvailable(false);
         }
       };
       checkAvailability();
     }, [selectedDate, selectedPlan,selectedTime]);
+
+
+
+
     const fetchData = async () => {
       try {
-     
-      const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/Showavaible_bike?pickupdate=${selectedDate}&pickuptime=${selectedTime}&plan=2`); // Corrected the URL, added "http://"
+      setloading(true)
+      console.log(pickdateandtime)
+      const uri2 ='https://hyperwave-1-c8519996.deta.app/get_the_avaiable_bike_data?pickuptime=2023-09-19%2012%3A30%3A00&plan=3'
+      const uri =`https://hyperwave-1-c8519996.deta.app/get_the_avaiable_bike_data?pickuptime=${pickdateandtime}&plan=${selectedPlan}`
+      const response = await fetch(uri); // Corrected the URL, added "http://"
         
         if (response.ok) {
           const data = await response.json();

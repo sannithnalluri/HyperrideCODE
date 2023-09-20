@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const BookingRecords = () => {
+  const [bookingdata, setbookingdata] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('https://hyperwave-1-c8519996.deta.app/get_all_future_bookin_detials');
+        
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data)
+          setbookingdata(data);
+        } else {
+          console.error('Error fetching data');
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    fetchData();
+  }, []);
     const data = [
         { id: 1, name: 'Item 1', price: 10,time:30 },
         { id: 2, name: 'Item 2', price: 15 ,time:30},
@@ -17,20 +38,20 @@ const BookingRecords = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
-              <th>Phone No</th>
-              <th>License No</th>
+              <th>bikeId</th>
+              <th>pickuptime</th>
+              <th>endtime</th>
               <th>Price</th>
               <th>Time</th>
             </tr>
           </thead>
           <tbody>
-            {data.map(item => (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.price}</td>
-                <td>{item.time}</td>
+            {bookingdata.map(item => (
+              <tr key={item._id}>
+                <td>{item._id}</td>
+                <td>{item.bike_id}</td>
+                <td>{item.pickuptime}</td>
+                <td>{item.endtime}</td>
               </tr>
             ))}
           </tbody>

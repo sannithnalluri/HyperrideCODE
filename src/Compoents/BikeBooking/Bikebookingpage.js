@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Bikebookingpage = () => {
   const navigate = useNavigate();
   const id = sessionStorage.getItem('bike_id');
+  console.log(id)
   const bikebookingdetials = sessionStorage.getItem('bikebookingdetials')
   const bikepickdate  = bikebookingdetials.substring(0,10)
   const bikepicktime = bikebookingdetials.substring(11,19)
@@ -15,62 +16,74 @@ const Bikebookingpage = () => {
   const pickupdateandtime = bikepickdate+' '+bikepicktime
   const [bike_details, setBikeDetails] = useState({});
   const [isChecked, setIsChecked] = useState(false);
-  const [end_time,setendtime] = useState('')
-  const [cost,setcost] = useState('')
-  const [booking,setbooking]  = useState(false)
+  const [end_time,setEndtime] = useState('')
+  const [cost,setCost] = useState('')
+  const [booking,setBooking]  = useState(false)
   useEffect(() => {
     const fetchBikeDetails = async () => {
       try {
-        const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/get_bike_details?bikeId=${id}`);
-
+        const response = await fetch(`https://hyperwave-1-c8519996.deta.app/get_single_bike_data?bike_id=${id}`);
+  
         if (response.ok) {
           const data = await response.json();
-          setBikeDetails(data[0]);
+          console.log(data);
+          setBikeDetails(data);
         }
       } catch (e) {
         console.error(e);
       }
     };
+  
+    fetchBikeDetails();
+  
+   
+  }, [id]);
 
-    fetchBikeDetails(); // Call the function inside useEffect
-    const fetchbookingDetials = async () => {
+
+  useEffect(()=>{
+    const fetchBookingDetails = async () => {
       try {
-        const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/get_booking_data?pickuptime=${pickupdateandtime}&plan=${plan}`);
-
+        console.log(pickupdateandtime,plan)
+        const uri = `https://hyperwave-1-c8519996.deta.app/get_booking_data?pickuptime=${pickupdateandtime}&plan=${plan}`;
+        const response = await fetch(uri);
+  
         if (response.ok) {
           const data = await response.json();
-          setendtime(data[0])
-          setcost(data[1])
+          setEndtime(data[0]);
+          setCost(data[1]);
         }
       } catch (e) {
         console.error(e);
       }
     };
-    fetchbookingDetials();
-  }, [id,pickupdateandtime,plan]); // Include 'id' in the dependency array to re-fetch when 'id' changes
+    fetchBookingDetails();
+  },[pickupdateandtime,plan])
 
+  
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
   };
-
- 
-
-
-  const Booknow=async ()=>{
-    try{
-      setbooking(true)
-      const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/BookBike?pickuptime=${pickupdateandtime}&plan=${plan}&bike_id=${id}`)
-     if(response.ok)
-       alert('succesfully')
-       const data = await response.json();
-        console.log(data)
-        setbooking(false)
-        navigate('/')
+  
+  const Booknow = async () => {
+    try {
+      setBooking(true);
+      const response = await fetch(`https://hyperwave-1-c8519996.deta.app/BookBike?pickuptime=${pickupdateandtime}&plan=${plan}&bike_id=${id}`);
+      
+      if (response.ok) {
+        alert('Successfully booked');
+        const data = await response.json();
+        setBooking(false);
+        navigate('/');
+      } else {
+        alert('Booking failed');
+      }
+    } catch (e) {
+      console.error(e);
+      alert('An error occurred during booking');
+      setBooking(false);
     }
-    catch(e){
-      console.log(e)
-    }
-  }
+  };
+  
 
 
   return (
