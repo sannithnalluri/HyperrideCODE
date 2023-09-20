@@ -71,7 +71,6 @@ const Bikebookingpage = () => {
       
       if (response.ok) {
         alert('Successfully booked');
-        const data = await response.json();
         setBooking(false);
         navigate('/');
       } else {

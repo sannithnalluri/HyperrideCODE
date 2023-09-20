@@ -47,9 +47,7 @@ const HomePage = () => {
    const [selectedPlan, setSelectedPlan] = useState('None');
    const [selectedDate, setSelectedDate] = useState('None');
    const pickdateandtime = selectedDate+' '+selectedTime
-   const bikebookingdata = [selectedDate,selectedTime+selectedPlan]
-
-
+   
    //function to handle in the page
     const handleShowavailabe=()=>{
       setshowbike(true)
@@ -87,7 +85,7 @@ const HomePage = () => {
         }
       };
       checkAvailability();
-    }, [selectedDate, selectedPlan,selectedTime]);
+    }, [selectedDate, selectedPlan,selectedTime,pickdateandtime]);
 
 
 
@@ -96,7 +94,6 @@ const HomePage = () => {
       try {
       setloading(true)
       console.log(pickdateandtime)
-      const uri2 ='https://hyperwave-1-c8519996.deta.app/get_the_avaiable_bike_data?pickuptime=2023-09-19%2012%3A30%3A00&plan=3'
       const uri =`https://hyperwave-1-c8519996.deta.app/get_the_avaiable_bike_data?pickuptime=${pickdateandtime}&plan=${selectedPlan}`
       const response = await fetch(uri); // Corrected the URL, added "http://"
         

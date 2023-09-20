@@ -22,12 +22,6 @@ const BookingRecords = () => {
 
     fetchData();
   }, []);
-    const data = [
-        { id: 1, name: 'Item 1', price: 10,time:30 },
-        { id: 2, name: 'Item 2', price: 15 ,time:30},
-        { id: 3, name: 'Item 3', price: 20,time:30 },
-        // Add more data as needed
-      ];
     return (
         <div className='Booking_records'>
             <h1>BikeBooking records</h1>
