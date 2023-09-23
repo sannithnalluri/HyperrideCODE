@@ -53,3 +53,20 @@
 .Checkbox input{
     width: 10%;
 }
+.booknowbutton button:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+
+}
+
+@media (max-width:720px) {
+.Booking_container{
+    display: block;
+}
+.bike_information{
+    width: 80vw;
+}
+.bookingDetails{
+    margin-top: 5vh;
+}
+}

@@ -1,8 +1,15 @@
 import { useState ,useEffect} from "react";
 import React from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const BookingDetails = () => {
+    const navigate = useNavigate()
+    const [isChecked, setIsChecked] = useState(false);
+    const handleCheckboxChange = (event) => {
+        setIsChecked(event.target.checked);
+      };
+    
     const storedData = sessionStorage.getItem('bikebookingdetials');
     const id = sessionStorage.getItem('bike_id')
     const pickdatetime = storedData.substring(0,18);
@@ -21,11 +28,18 @@ const BookingDetails = () => {
         end_time: endtime,
         cost:cost.toString(),    
     }
-    console.log(formData)
     const handleSubmit = async () => {
         try {
             const response = await axios.post('https://hyperwave-1-c8519996.deta.app/bookbikenow', formData);
-            console.log(response)
+            if (response.status >= 200 && response.status < 300) {
+                const { id } = response.data;
+                console.log('bookid:',id);
+                navigate('/')
+    
+              } else {
+                console.log('Request failed with status code:', response.status);
+                // Handle the failure, e.g., show an error message to the user
+              }
     
         } catch (error) {
             console.log(error);
@@ -70,11 +84,14 @@ const BookingDetails = () => {
                 </div>
             </div>
             <div className="Checkbox">
-                <input type="checkbox"/>
+                <input
+                 checked={isChecked}
+                 onChange={handleCheckboxChange}
+                  type="checkbox"/>
                 <label><a href="/">Accept All Terms and Condition</a></label>
             </div>
-           <div>
-            <button onClick={handleSubmit}>book now</button>
+           <div className="booknowbutton">
+            <button onClick={handleSubmit} style={{color:isChecked?'':'orange'}} disabled={!isChecked}>Book now</button>
             
            </div>
         </div>
