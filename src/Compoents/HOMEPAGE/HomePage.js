@@ -7,7 +7,7 @@ import CustomerReview from './CustomerReview';
 import Faq from './Faq';
 import Footer from './Footer';
 import DisplayBike from './DisplayBike';
-import LoadingAnimation from '../GlobalCompoents/Loading';
+//import LoadingAnimation from '../GlobalCompoents/Loading';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -39,17 +39,17 @@ const HomePage = () => {
 
     
     //the state of the currentpage
-    const [isLoading,setloading] = useState(true)
+    //const [isLoading,setloading] = useState(true)
     const [bikedata,setBikedata] = useState([])
     const[IsAvailable,setIsAvailable] = useState(false)
-   const [showbike,setshowbike] = useState(false)
+   //const [showbike,setshowbike] = useState(false)
    const [selectedPlan, setSelectedPlan] = useState('None');
    const [selectedDate, setSelectedDate] = useState('None');
    const pickdateandtime = selectedDate+' '+selectedTime
    
    //function to handle in the page
     const handleShowavailabe=()=>{
-      setshowbike(true)
+     // setshowbike(true)
       fetchData();
       const bookingdataofike  = [pickdateandtime,selectedPlan]
       sessionStorage.setItem('bikebookingdetials',bookingdataofike)
@@ -104,14 +104,14 @@ const HomePage = () => {
 
     const fetchData = async () => {
       try {
-      setloading(true)
+      //setloading(true)
       const uri =`https://hyperwave-1-c8519996.deta.app/show_avaible?pickup_time=${pickdateandtime}&plan=${selectedPlan}`
       const response = await fetch(uri); // Corrected the URL, added "http://"
         
         if (response.ok) {
           const data = await response.json();
           setBikedata(data);
-          setloading(false)
+         // setloading(false)
         } else {
           console.error('Network response was not ok.');
         }
@@ -182,17 +182,7 @@ const HomePage = () => {
                     </div>
                 </motion.div>
             </div>
-            {/* <div style={{display:showbike?'':'none'}} className='Display_Bike'>
-
-            <ImageCarousel bikedata={bikedata}/>
-            </div> */}
-            <div id='displaybike' style={{display:showbike?'':'none'}} >
-              <div style={{display:isLoading?'block':'none'}}>
-              <LoadingAnimation />
-              </div>
-             
-              <DisplayBike bikedata={bikedata}/>
-            </div>
+             <DisplayBike bikedata={bikedata}/>
             <RevealingAnimation>
             <Offers/>
             </RevealingAnimation>
