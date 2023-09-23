@@ -1,110 +1,55 @@
-.booking_container{
-    padding-top: 15vh;
+.Booking_container{
+    padding-top: 10%;
     display: flex;
-    color: rgb(62, 62, 62);
+    margin: 0px 10vw;
+    justify-content: space-around;
 }
-.Summary_Container{
-    margin-top: 25%;
-    border: 1px black solid;
-    padding: 10px;
-    margin-left: 5vw;
-    width: 20vw;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+.bike_information{
+    width: 35vw;
+   
 }
-.Booking_detials{
-    border: 1px black solid;
-    height: 20vh;
-    margin-left: 5vw;
-    padding: 10px;
-    margin-top: 10%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-.Summary_Container label{
-    font-size: 16px;
-    margin: 5vw 1vw;
-    padding: 5vh 0px;
-    margin-bottom: 4vh;
-    color: rgb(73, 73, 73);
-}
-.Summary_Container h3{
-    font-size: 20px;
-    margin-bottom: 4vh;
-}
-.terms_and_condition input{
-    width: 20px;
-    margin-left: 20%;
-    margin-top: 5%;
-}
-.Payment_checkout{
-    margin-left: 40%;
-}
-.Bike_image img{
-    width: 40rem
-}
-.Booking_page{
-    margin: 1vh 10vw;
-}
-.Bike_name h1{
-    font-size: 30px;
+.bike_information img{
+    box-shadow: 0px 0px 10px gray;
+    width: 100%;
+}.bike_information h1{
+    background-color: red;
     color: white;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
 }
-.Bike_name{
-    background-color: rgb(221,21,23);
-    padding: 1rem;
-    border-radius: 1px;
-}
-.Bike_details{
-    border: 1px black solid;
-    background-color: rgb(255, 255, 255);
-    border-radius: 2px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-
-}
-.Bike_details ul {
+.Bike_features ul{
     display: flex;
-    margin-top: 3vh;
     list-style: none;
+    justify-content: space-between;
+  
 }
-.Bike_details ul li{
-    margin: 1vh 5vw;
+.Bike_features ul li{
+    font-size: 20px;
+}
+.Bike_features{
+    padding: 20px;
+    border: 1px black solid;
+    box-shadow: 0px 0px 1px gray;
+}
+.bookingDetails{
+    padding: 20px;
+    border: 1px black solid;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+}
+.bookingDetails h4{
+    margin: 4px 2px;
+}
+.booking_summary{
+    border: 1px black solid;
+    padding: 20px;
+    margin-top: 20%;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+}
+.booking_summary h6{
     font-size: 16px;
 }
-.loading-spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vh; /* Adjust the height as needed */
-  }
-  
-  .spinner {
-    border: 4px solid #ffffff; /* White border */
-    border-top: 4px solid transparent; /* Transparent top border to create the spinner effect */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite; /* Spin animation */
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-@media (max-width:420px) {
-    .booking_container{
-        display: block;
-        padding-top: 5vh;
-    }
-    .booking_container img{
-        width: 90vw;
-    }
-    .Summary_Container{
-        margin-top: 10%;
-    }
+.Checkbox input{
+    width: 10%;
 }

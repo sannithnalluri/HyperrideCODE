@@ -10,6 +10,7 @@ import DisplayBike from './DisplayBike';
 import LoadingAnimation from '../GlobalCompoents/Loading';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 const HomePage = () => {
   const RevealingAnimation = ({ children }) => {
     const [ref, inView] = useInView({ // Trigger animation once when the component enters the viewport
@@ -27,8 +28,6 @@ const HomePage = () => {
     );
   };
     const currentDate = new Date();
-
-    // Format the date in YYYY-MM-DD format, which is the required format for input[type="date"]
     const year = currentDate.getFullYear();
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const day = String(currentDate.getDate()).padStart(2, '0');
@@ -52,12 +51,26 @@ const HomePage = () => {
     const handleShowavailabe=()=>{
       setshowbike(true)
       fetchData();
+      const bookingdataofike  = [pickdateandtime,selectedPlan]
+      sessionStorage.setItem('bikebookingdetials',bookingdataofike)
     }
     const handleTimeChange = (e) => {
-      const inputTime = e.target.value;  
-            setSelectedTime(inputTime);
-       
-      };
+      const inputTime = e.target.value;
+    
+      // Combine the selected date and time into a single datetime string
+      const selectedDateTime = `${selectedDate} ${inputTime}`;
+      const currentDateTime = `${formattedCurrentDate} ${currentHours}:${currentMinutes}:${currentSeconds}`;
+    
+      // Parse the selected and current datetime strings to compare them
+      const selectedDateTimeObj = new Date(selectedDateTime);
+      const currentDateTimeObj = new Date(currentDateTime);
+    
+      if (selectedDateTimeObj >= currentDateTimeObj) {
+        setSelectedTime(inputTime);
+      } else {
+        setSelectedTime(`${currentHours}:${currentMinutes}:${currentSeconds}`);
+      }
+    };
 
 
    
@@ -78,8 +91,7 @@ const HomePage = () => {
       const checkAvailability = () => {
         if (selectedDate && selectedPlan !== 'None' &&selectedTime) {
           setIsAvailable(true);
-          const bookingdataofike  = [pickdateandtime,selectedPlan]
-          sessionStorage.setItem('bikebookingdetials',bookingdataofike)
+        
         } else {
           setIsAvailable(false);
         }
@@ -93,13 +105,11 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
       setloading(true)
-      console.log(pickdateandtime)
-      const uri =`https://hyperwave-1-c8519996.deta.app/get_the_avaiable_bike_data?pickuptime=${pickdateandtime}&plan=${selectedPlan}`
+      const uri =`https://hyperwave-1-c8519996.deta.app/show_avaible?pickup_time=${pickdateandtime}&plan=${selectedPlan}`
       const response = await fetch(uri); // Corrected the URL, added "http://"
         
         if (response.ok) {
           const data = await response.json();
-          console.log(data)
           setBikedata(data);
           setloading(false)
         } else {
@@ -150,6 +160,7 @@ const HomePage = () => {
                        type='time'
                        onChange={handleTimeChange}
                        value={selectedTime}
+                       step='900'
                        id='timeInput'/>
             
                        

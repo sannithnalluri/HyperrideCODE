@@ -17,7 +17,7 @@ function UserDataForm() {
 
   // Load saved data from session storage when the component mounts
   useEffect(() => {
-    const savedData = sessionStorage.getItem('formData');
+    const savedData = sessionStorage.getItem('userdata');
     if (savedData) {
       setFormData(JSON.parse(savedData));
     }
@@ -34,7 +34,7 @@ function UserDataForm() {
   const handleSave = () => {
     // Save formData to session storage
     navigate('/BikeBooking')
-    sessionStorage.setItem('formData', JSON.stringify(formData));
+    sessionStorage.setItem('userdata', JSON.stringify(formData));
 
     // Optionally, you can provide feedback to the user
   };
