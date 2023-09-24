@@ -6,11 +6,10 @@ const BookingRecords = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('https://hyperwave-1-c8519996.deta.app/get_all_future_bookin_detials');
+        const response = await fetch(' https://hyperwave-1-c8519996.deta.app/get_all_booking_details');
         
         if (response.ok) {
           const data = await response.json();
-          console.log(data)
           setbookingdata(data);
         } else {
           console.error('Error fetching data');
@@ -31,12 +30,16 @@ const BookingRecords = () => {
         <table>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>bikeId</th>
-              <th>pickuptime</th>
-              <th>endtime</th>
-              <th>Price</th>
-              <th>Time</th>
+              <th>Order ID</th>
+              <th>BikeId</th>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>License NO</th>
+              <th>Address </th>
+              <th>Pickup_time</th>
+              <th>End_time </th>
+              <th>Cost</th>
             </tr>
           </thead>
           <tbody>
@@ -44,8 +47,16 @@ const BookingRecords = () => {
               <tr key={item._id}>
                 <td>{item._id}</td>
                 <td>{item.bike_id}</td>
-                <td>{item.pickuptime}</td>
-                <td>{item.endtime}</td>
+                <td>{item.name}</td>
+                <td>{item.phone}</td>
+                <td>{item.email}</td>
+                <td>{item.license_number}</td>
+                <td>{item.location}</td>
+                <td>{item.pickup_datetime}</td>
+                <td>{item.end_datetime}</td>
+                <td>{item.cost}</td>
+
+                
               </tr>
             ))}
           </tbody>

@@ -61,7 +61,6 @@ const PhoneNavbar = () => {
                 <ul>
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/AboutUs'>About Us</Link></li>
-                        <li><Link to='/Features'> Features</Link></li>
                         <li><Link href='/Contact'>Contact Us</Link></li>
                 </ul>
             </motion.div>

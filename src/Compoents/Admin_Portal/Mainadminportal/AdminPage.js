@@ -24,12 +24,6 @@ const AdminPage = () => {
             setPricing(false)
 
         }
-        function handlePricingClick(){
-            setBookingRecords(false)
-            setBikeRecords(false)
-            setPricing(true)
-
-        }
     return (
         <div>
             <div style={{display:user?'none':'block'}}>
@@ -44,14 +38,6 @@ const AdminPage = () => {
                 </div>
              
                 <div  className='Admin_section'>
-                    {/* <div className='admin_nav'>
-                        <h1 onClick={handleBookingClick} style={{color:BookignRecords?'orange':''}}>Booking records</h1>
-                        <hr/>
-                        <h1 onClick={handleBikeClick} style={{color:BikeRecords?'orange':''}}>Bike records</h1>
-                        <hr/>
-                        <h1 onClick={handlePricingClick} style={{color:Pricing?'orange':''}}>Price records records</h1>
-                        <hr/>
-                    </div> */}
                     <button
                     onClick={() => setShowMobileNav(!showMobileNav)}
                     className="mobile-menu-button"
@@ -62,8 +48,6 @@ const AdminPage = () => {
                     <h1 onClick={handleBookingClick} style={{color:BookignRecords?'orange':''}}>Booking records</h1>
                         <hr/>
                         <h1 onClick={handleBikeClick} style={{color:BikeRecords?'orange':''}}>Bike records</h1>
-                        <hr/>
-                        <h1 onClick={handlePricingClick} style={{color:Pricing?'orange':''}}>Price records records</h1>
                         <hr/>
                     </div>
                     <div className="admim_working_profile">

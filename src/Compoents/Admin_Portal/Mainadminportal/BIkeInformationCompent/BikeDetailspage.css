@@ -1,0 +1,78 @@
+/* BikeDetailsPage.css */
+
+.BikeDetailsPage {
+    padding: 20px;
+    height: 200px; /* Limit the maximum width of the container */
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+.BikeDetailsPage img {
+    max-width: 100px;
+    height: auto;
+  }
+  /* BikeDetailsPage.css */
+
+.BikeDetailsPage {
+    width: 60vw; /* Fixed width for the container */
+    height: 60vh; /* Maximum height for the container (adjust as needed) */
+    overflow: auto; /* Add scrollbars if content exceeds the container height */
+    padding: 20px;
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  

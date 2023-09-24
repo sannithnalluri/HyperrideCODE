@@ -12,8 +12,7 @@ function Footer() {
         </div>
         <div className="footer-right">
           <ul className="footer-links">
-            <li><a href="/About">Privacy Policy</a></li>
-            <li><a href="Terms">Terms of Service</a></li>
+            <li><a href="terms">Terms of Service</a></li>
             <li><a href="Contact">Contact Us</a></li>
             <li><Link to="/Adminportal">Admin_portal</Link></li>
           </ul>

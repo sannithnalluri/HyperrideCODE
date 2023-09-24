@@ -12,8 +12,7 @@ const WebNavbar = () => {
                     <ul>
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/AboutUs'>About Us</Link></li>
-                        <li><Link to='/Features'> Features</Link></li>
-                        <li><a href='#Contact'>Contact Us</a></li>
+                        <li><a href='/Contact'>Contact Us</a></li>
                     </ul>
                 </div>
             </div>

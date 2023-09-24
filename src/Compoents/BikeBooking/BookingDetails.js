@@ -1,7 +1,7 @@
 import { useState ,useEffect} from "react";
 import React from 'react';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const BookingDetails = () => {
     const navigate = useNavigate()
@@ -33,7 +33,7 @@ const BookingDetails = () => {
             const response = await axios.post('https://hyperwave-1-c8519996.deta.app/bookbikenow', formData);
             if (response.status >= 200 && response.status < 300) {
                 const { id } = response.data;
-                console.log('bookid:',id);
+                alert('booksucessfully ',id);
                 navigate('/')
     
               } else {
@@ -88,7 +88,7 @@ const BookingDetails = () => {
                  checked={isChecked}
                  onChange={handleCheckboxChange}
                   type="checkbox"/>
-                <label><a href="/">Accept All Terms and Condition</a></label>
+                <label><Link to='/terms'> Accept All Terms and Condition </Link></label>
             </div>
            <div className="booknowbutton">
             <button onClick={handleSubmit} style={{color:isChecked?'':'orange'}} disabled={!isChecked}>Book now</button>

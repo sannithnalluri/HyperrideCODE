@@ -1,31 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Addbike from './BIkeInformationCompent/Addbike';
+import DeleteBike from './BIkeInformationCompent/DeleteBike';
+import BikeDetailsPage from './BIkeInformationCompent/GetAllbikedata';
 
 const BikeInformation = () => {
-    return (
+  const [showAddBike, setShowAddBike] = useState(false);
+  const [showDelBike, setShowDelBike] = useState(false);
+  const [showGetAllBikeData, setShowGetAllBikeData] = useState(false);
+
+  const handleButtonClick = (section) => {
+    // Reset all section states
+    setShowAddBike(false);
+    setShowDelBike(false);
+    setShowGetAllBikeData(false);
+
+    // Set the state of the clicked section to true
+    switch (section) {
+      case 'Add Bike':
+        setShowAddBike(true);
+        break;
+      case 'Del Bike':
+        setShowDelBike(true);
+        break;
+      case 'Get_All_Bike_data':
+        setShowGetAllBikeData(true);
+        break;
+      default:
+        break;
+    }
+  };
+
+  return (
+    <div className='Bike_Info_container'>
+      <div className='Bike_details_portal'>
+        <ul>
+          <li>
+            <button onClick={() => handleButtonClick('Add Bike')}>Add Bike</button>
+          </li>
+          <li>
+            <button onClick={() => handleButtonClick('Del Bike')}>Del Bike</button>
+          </li>
+          <li>
+            <button onClick={() => handleButtonClick('Get_All_Bike_data')}>Get_All_Bike_data</button>
+          </li>
+        </ul>
+      </div>
+      <div className='Updating_container'>
         <div>
-            <h1>Bike_information</h1>
-            <div  className='Bike_details_portal'>
-                <ul >
-                    <li><button>Add Bike</button></li>
-                    <li><button>Del Bike</button></li>
-                    <li><button>Hold Bike</button></li>
-                    <li><button>Resume Bike</button></li>
-                    <li><button>Get_All_Bike_data</button></li>
-                    <li><button>Update bike details</button></li>
-                    <li><button>Update bike Booking status</button></li>
-
-                    
-                </ul>
-            </div>
-            <div className='Updating_container'>
-                <div>
-                    <Addbike/>
-                </div>
-
-            </div>
+          {showAddBike && <Addbike />}
         </div>
-    );
+        <div>
+          {showDelBike && <DeleteBike/>}
+        </div>
+        <div>
+          {showGetAllBikeData && <BikeDetailsPage/>}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default BikeInformation;

@@ -1,6 +1,6 @@
 /* Assuming you have a CSS file, you can add the following styles to it */
 .Admin_portal{
-    padding-top: 10vh;
+    padding-top: 6vh;
 }
 
 .admin_nav {
@@ -41,7 +41,7 @@
   }
   
   .table-container {
-    max-height: 300px; /* Set the maximum height for the table */
+    max-height:400px; /* Set the maximum height for the table */
     overflow-y: auto; /* Enable vertical scrolling if needed */
   }
   
@@ -69,16 +69,26 @@
     margin-left: 90%;
   }
 .Bike_details_portal ul{
-  display: flex;
   list-style: none;
 }
 .Bike_details_portal ul li{
   margin: 2px;
 }
 .Bike_details_portal ul li button{
-  background-color: white;
-  color: rgb(14, 173, 231);
+ width: 300px;
+  color: rgb(255, 255, 255);
 }
+
+.Bike_Info_container{
+  display: flex;
+}
+.Updating_container{
+  margin-left: 5vw;
+}
+.Delete_bike_container input{
+  width: 100%;
+}
+
   @media (max-width: 768px) {
     .admin_nav {
       width: 100%; /* Take up the full width of the screen on mobile */

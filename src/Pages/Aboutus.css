@@ -1,0 +1,71 @@
+/* Apply styles to the entire page */
+.About_us_contianer{
+    padding-top: 5vh;
+    margin: 1vh 10vw;
+}
+.about-us {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Style the heading */
+.about-us h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style spans for emphasis */
+.about-us span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Style paragraphs for content */
+.about-us p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style unordered list for key points */
+.about-us ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+/* Style list items */
+.about-us li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Style links */
+.about-us a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-us a:hover {
+    text-decoration: underline;
+}
+
+/* Add some padding and background to the footer */
+.about-us footer {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Style the content container */
+.about-us .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
