@@ -90,6 +90,9 @@
 }
 
   @media (max-width: 768px) {
+    .Bike_Info_container{
+      display: block;
+    }
     .admin_nav {
       width: 100%; /* Take up the full width of the screen on mobile */
       height: auto; /* Allow the navigation to scroll vertically on mobile */
