@@ -6,11 +6,6 @@
     margin-top: 10vh;
     background-color: #fff;
 }
-.User_details_page{
-  background-image: url('../Assests/formbg.jpg');
-  background-size: cover;
-  height: 100vh;
-}  
 .userinputpage{
     padding-top: 15vh;
 }

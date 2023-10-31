@@ -6,7 +6,7 @@ const BookingRecords = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(' https://hyperwave-1-c8519996.deta.app/get_all_booking_details');
+        const response = await fetch('https://hyperwave-1-c8519996.deta.app/get_all_booking_details');
         
         if (response.ok) {
           const data = await response.json();
@@ -40,6 +40,8 @@ const BookingRecords = () => {
               <th>Pickup_time</th>
               <th>End_time </th>
               <th>Cost</th>
+              <th>Transaction_id</th>
+              <th>Time of Booking</th>
             </tr>
           </thead>
           <tbody>
@@ -55,6 +57,8 @@ const BookingRecords = () => {
                 <td>{item.pickup_datetime}</td>
                 <td>{item.end_datetime}</td>
                 <td>{item.cost}</td>
+                <td>{item.transactionId}</td>
+                <td>{item.timestamp}</td>
 
                 
               </tr>

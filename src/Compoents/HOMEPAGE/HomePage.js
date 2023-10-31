@@ -14,7 +14,8 @@ import { useInView } from 'react-intersection-observer';
 const HomePage = () => {
   const RevealingAnimation = ({ children }) => {
     const [ref, inView] = useInView({ // Trigger animation once when the component enters the viewport
-      threshold: 0.3, // Adjust this threshold as needed
+      threshold: 0.3,
+      triggerOnce:true // Adjust this threshold as needed
     });
     return (
       <motion.div
@@ -111,15 +112,17 @@ const HomePage = () => {
         <div>
             <MainNavbar/>
             <div className='hero_section'>
+
                 <motion.div initial={{x:-100,opacity:.5}}
                     animate={{x:0,opacity:1}}
                     transition={{
                       duration:1.5,
                       stiffness:100
                     }} className='hero_Section_img'>
-                <motion.img
-                  src={require('../Assests/mainscooty1.png')} alt='hero_image'/>
+                {/* <motion.img
+                  src={require('../Assests/mainscooty1.png')} alt='hero_image'/> */}
                 </motion.div>
+                
                 <motion.div
                 initial={{x:100}}
                 animate={{x:0}}

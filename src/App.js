@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Aboutus from './Pages/Aboutus';
 import Contactuspage from './Pages/Contactuspage';
 import Terms from './Pages/Terms';
+import BookingConformpage from './Compoents/BikeBooking/BookingConformpage';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
             <Route  path='/UserDetails' element={<UserDetailsPage/>}/>
             <Route path='/BikeBooking' element={<Bikebookingpage/>}/>
+            <Route path='/BookingStatus' element={<BookingConformpage/>}/>
             <Route path='/Adminportal' element={<AdminPage/>}/>
     
 

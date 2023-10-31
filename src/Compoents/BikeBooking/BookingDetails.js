@@ -1,10 +1,9 @@
 import { useState ,useEffect} from "react";
 import React from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BookingDetails = () => {
-    const navigate = useNavigate()
     const [isChecked, setIsChecked] = useState(false);
     const handleCheckboxChange = (event) => {
         setIsChecked(event.target.checked);
@@ -28,23 +27,29 @@ const BookingDetails = () => {
         end_time: endtime,
         cost:cost.toString(),    
     }
-    const handleSubmit = async () => {
-        try {
-            const response = await axios.post('https://hyperwave-1-c8519996.deta.app/bookbikenow', formData);
-            if (response.status >= 200 && response.status < 300) {
-                const { id } = response.data;
-                alert('booksucessfully ',id);
-                navigate('/')
-    
-              } else {
-                console.log('Request failed with status code:', response.status);
-                // Handle the failure, e.g., show an error message to the user
-              }
-    
-        } catch (error) {
-            console.log(error);
+   
+    const initiatePayment = async () => {
+      try {
+        const formDataString = JSON.stringify(formData);
+        sessionStorage.setItem('bookingdetials', formDataString);
+        const transactionDetials = {
+            'amount':cost,
+            'userId':bookingRequest.name
         }
-    }
+        console.log(transactionDetials)
+        const response = await axios.post('https://paymentapi-1-t9346200.deta.app/initiate-payment',transactionDetials);
+        console.log(response.data.pay_page_url)
+        console.log(response.data.Transaction_id)
+        sessionStorage.setItem('Transaction_id',response.data.Transaction_id)
+        
+        window.location.href= response.data.pay_page_url;
+        
+      } catch (error) {
+        console.error(error);
+       
+      }
+    };
+    
     useEffect(() => {
         const fecthbookingdetails=async ()=>{
             try {
@@ -91,7 +96,7 @@ const BookingDetails = () => {
                 <label><Link to='/terms'> Accept All Terms and Condition </Link></label>
             </div>
            <div className="booknowbutton">
-            <button onClick={handleSubmit} style={{color:isChecked?'':'orange'}} disabled={!isChecked}>Book now</button>
+            <button onClick={initiatePayment} style={{color:isChecked?'':'orange'}} disabled={!isChecked}>Pay Now</button>
             
            </div>
         </div>
