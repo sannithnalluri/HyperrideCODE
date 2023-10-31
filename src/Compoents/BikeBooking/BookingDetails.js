@@ -1,9 +1,10 @@
 import { useState ,useEffect} from "react";
 import React from 'react';
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const BookingDetails = () => {
+    const navigate = useNavigate();
     const [isChecked, setIsChecked] = useState(false);
     const handleCheckboxChange = (event) => {
         setIsChecked(event.target.checked);
@@ -40,9 +41,11 @@ const BookingDetails = () => {
         const response = await axios.post('https://paymentapi-1-t9346200.deta.app/initiate-payment',transactionDetials);
         console.log(response.data.pay_page_url)
         console.log(response.data.Transaction_id)
-        sessionStorage.setItem('Transaction_id',response.data.Transaction_id)
-        
-        window.location.href= response.data.pay_page_url;
+        sessionStorage.setItem('Transaction_id',response.data.Transaction_id) 
+        window.open(response.data.pay_page_url)
+        navigate('/BookingStatus')
+       
+       
         
       } catch (error) {
         console.error(error);
