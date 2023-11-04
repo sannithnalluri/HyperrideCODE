@@ -1,6 +1,5 @@
 import { useState ,useEffect} from "react";
 import React from 'react';
-import axios from 'axios';
 import { Link,useNavigate } from "react-router-dom";
 
 const BookingDetails = () => {
@@ -29,30 +28,57 @@ const BookingDetails = () => {
         cost:cost.toString(),    
     }
    
-    const initiatePayment = async () => {
-      try {
-        const formDataString = JSON.stringify(formData);
-        sessionStorage.setItem('bookingdetials', formDataString);
+    // const initiatePayment = async () => {
+    //   try {
+    //     const formDataString = JSON.stringify(formData);
+    //     sessionStorage.setItem('bookingdetials', formDataString);
+    //     const transactionDetials = {
+    //         'amount':cost,
+    //         'userId':bookingRequest.name
+    //     }
+    //     console.log(transactionDetials)
+    //     const response = await axios.post('https://paymentapi-1-t9346200.deta.app/initiate-payment',transactionDetials);
+    //     console.log(response.data.pay_page_url)
+    //     console.log(response.data.Transaction_id)
+    //     sessionStorage.setItem('Transaction_id',response.data.Transaction_id) 
+    //     window.open(response.data.pay_page_url)
+    //     navigate('/BookingStatus')    
+    //   } catch (error) {
+    //     console.error(error);
+       
+    //   }
+    // };
+    
+    const initiatePayment2 = async () => {
+        const url = 'http://127.0.0.1:8000/initiate-payment';
         const transactionDetials = {
             'amount':cost,
             'userId':bookingRequest.name
         }
-        console.log(transactionDetials)
-        const response = await axios.post('https://paymentapi-1-t9346200.deta.app/initiate-payment',transactionDetials);
-        console.log(response.data.pay_page_url)
-        console.log(response.data.Transaction_id)
-        sessionStorage.setItem('Transaction_id',response.data.Transaction_id) 
-        window.open(response.data.pay_page_url)
-        navigate('/BookingStatus')
-       
-       
-        
-      } catch (error) {
-        console.error(error);
-       
-      }
-    };
     
+        try {
+            const formDataString = JSON.stringify(formData);
+           sessionStorage.setItem('bookingdetials', formDataString);
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(transactionDetials),
+          });
+    
+          const result = await response.json();
+          console.log(result.pay_page_url)
+          window.open(result.pay_page_url)
+          sessionStorage.setItem('Transaction_id',result.Transaction_id) 
+          navigate('/BookingStatus')
+        } catch (error) {
+          console.error('Error initiating payment:', error);
+        }
+      };
+    
+
     useEffect(() => {
         const fecthbookingdetails=async ()=>{
             try {
@@ -99,7 +125,7 @@ const BookingDetails = () => {
                 <label><Link to='/terms'> Accept All Terms and Condition </Link></label>
             </div>
            <div className="booknowbutton">
-            <button onClick={initiatePayment} style={{color:isChecked?'':'orange'}} disabled={!isChecked}>Pay Now</button>
+            <button onClick={initiatePayment2} style={{color:isChecked?'':'orange'}} disabled={!isChecked}>Pay Now</button>
             
            </div>
         </div>
