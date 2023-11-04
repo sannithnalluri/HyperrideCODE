@@ -1,5 +1,5 @@
 .BookingStatus_container{
-    margin: 10% 40%;
+    margin: 10% 30%;
     line-height: 30px;
 }
 .BookingStatus_container h3{
@@ -7,4 +7,10 @@ font-weight: 400;
 }.BookingStatus_container img{
     width: 50px;
     height: 50px;
+}
+@media (max-width:720px) {
+    .BookingStatus_container{
+        margin: 10vh 5vw;
+    }
+    
 }

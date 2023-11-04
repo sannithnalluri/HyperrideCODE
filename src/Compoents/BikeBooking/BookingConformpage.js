@@ -58,11 +58,13 @@ const BookingConformpage = () => {
       <h1>Payment Status</h1>
 
       {paymentstatus === 'SUCCESS' ? (
-        <div>
+        <div className='BookingStatus_container'>
           <h1>Payment Status</h1>
           <h3>Transaction Id: {Transactionid}</h3>
           <h3>Transaction Status: SUCCESSFUL</h3>
           <h3>Amount: {amount / 100}</h3>
+
+          <h2>Take Screen Shot Future Requirement</h2>
         </div>
       ) : (
         <div className='BookingStatus_container'>

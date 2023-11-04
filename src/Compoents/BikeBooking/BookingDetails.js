@@ -52,7 +52,7 @@ const BookingDetails = () => {
     const initiatePayment2 = async () => {
         const url = 'http://127.0.0.1:8000/initiate-payment';
         const transactionDetials = {
-            'amount':cost,
+            'amount':1,
             'userId':bookingRequest.name
         }
     
@@ -70,9 +70,10 @@ const BookingDetails = () => {
     
           const result = await response.json();
           console.log(result.pay_page_url)
-          window.open(result.pay_page_url)
+          window.open(result.pay_page_url, '_blank', 'noopener,noreferrer');
           sessionStorage.setItem('Transaction_id',result.Transaction_id) 
           navigate('/BookingStatus')
+        
         } catch (error) {
           console.error('Error initiating payment:', error);
         }

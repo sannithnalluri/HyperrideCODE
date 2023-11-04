@@ -24,6 +24,7 @@
     font-family:'Arial Narrow', Arial, sans-serif
     
 }
+
 .hero_Section_img img{
     width: 35vw;
     height: 95vh;
@@ -115,21 +116,24 @@
   }  
   .Date_picking_Section{
     width: 90vw;
-    height: 90vh;
-    margin: 1vh 5vw;
+    height: 80vh;
+    margin: 10vh 5vw;
   }
   .logo_Container{
     width: 80vw;
     height: 8vh;
     margin: 4vh 4vw;
+    border-radius: 5px;
   }
   .logo_Container img{
-    width: 70vw;}
+    width: 70vw;
+    
+}
 .PickUP_selection_section{
     display: block;
 } 
 .PickUP_selection_section h2{
-    margin: 2vh 5vw;
+    margin: 1vh 5vw;
 } 
 .PickUP_selection_section input{
     width: 70vw;
@@ -138,12 +142,10 @@
 .Plan_selection_input select{
     width: 70vw;
 }
-.Plan_selection_input option{
-    width: 70vw;
-}
+
 .Show_avail_Button button{
     width: 80vw;
-    margin: 10vh 1vw;
+    margin: 2vh 1vw;
 }
 .Show_avail_Button{
     margin: 2vw;
