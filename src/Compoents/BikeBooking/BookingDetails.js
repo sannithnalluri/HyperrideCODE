@@ -50,7 +50,7 @@ const BookingDetails = () => {
     // };
     
     const initiatePayment2 = async () => {
-        const url = 'http://127.0.0.1:8000/initiate-payment';
+        const url = 'https://paymentapi-1-t9346200.deta.app/initiate-payment';
         const transactionDetials = {
             'amount':1,
             'userId':bookingRequest.name
