@@ -34,7 +34,7 @@ const Addbike = () => {
     
         try {
             console.log(formData)
-          const response = await fetch(`http://https://hyperwave-1-c8519996.deta.app/Upload_bike_details?bikename=${formData.bikename}&bikebookingstatus=${false}&currentpickuptime=${formData.currentpickuptime}&currentexpirytime=${formData.currentexpirytime}&bikeFeatures1=${formData.bikeFeatures1}&bikeFeatures2=${formData.bikeFeatures2}&bikeFeatures3=${formData.bikeFeatures3}`, {
+          const response = await fetch(`https://hyperwave-1-c8519996.deta.app/Upload_bike_details?bikename=${formData.bikename}&bikebookingstatus=${false}&currentpickuptime=${formData.currentpickuptime}&currentexpirytime=${formData.currentexpirytime}&bikeFeatures1=${formData.bikeFeatures1}&bikeFeatures2=${formData.bikeFeatures2}&bikeFeatures3=${formData.bikeFeatures3}`, {
             method: 'POST',
             body: formDataToSend,
           });

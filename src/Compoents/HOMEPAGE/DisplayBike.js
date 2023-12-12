@@ -21,11 +21,10 @@ const DisplayBike = ({ bikedata }) => {
             </div>
             <div>
               <h2>{bike.bikename}</h2>
-              <div >
+              {/* <div className='Featutes' >
                 <h6>{bike.bikeFeatures1}</h6>
-                <h6>{bike.bikeFeatures2}</h6>
                 <h6>{bike.bikeFeatures3}</h6>
-              </div>
+              </div> */}
               <div>
                 <button onClick={()=>{handlebooknow(bike._id)}}>Book Now</button>
                 </div>

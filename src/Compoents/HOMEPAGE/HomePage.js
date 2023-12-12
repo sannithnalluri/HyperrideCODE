@@ -10,6 +10,7 @@ import DisplayBike from './DisplayBike';
 import LoadingAnimation from '../GlobalCompoents/Loading';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const RevealingAnimation = ({ children }) => {
@@ -112,27 +113,12 @@ const HomePage = () => {
         <div>
             <MainNavbar/>
             <div className='hero_section'>
-
-                <motion.div initial={{x:-100,opacity:.5}}
-                    animate={{x:0,opacity:1}}
-                    transition={{
-                      duration:1.5,
-                      stiffness:100
-                    }} className='hero_Section_img'>
-                {/* <motion.img
-                  src={require('../Assests/mainscooty1.png')} alt='hero_image'/> */}
-                </motion.div>
-                
+            <div class="gradient-overlay"></div>
                 <motion.div
                 initial={{x:100}}
                 animate={{x:0}}
                 transition={{duration:1}}
                 className='Date_picking_Section'>
-                    <motion.div 
-                    
-                    className='logo_Container'>
-                        <img src={require('../Assests/hyperride2.png')} alt='hero_image'/>
-                    </motion.div>
                     <div className='PickUP_selection_section'>
                         <div className='Pickup_Data'>
                         <h2>Pickup Data</h2>
@@ -142,6 +128,7 @@ const HomePage = () => {
                         min={formattedCurrentDate}
                         value={selectedDate}
                         onChange={handleDateChange}
+                        id='Pickup_date'
                         />
                         </div>
                         <div className='Pickup_Time'>
@@ -174,7 +161,7 @@ const HomePage = () => {
                 </motion.div>
             </div>
             <div style={{display:showbike?'block':'none'}} id='displaybike'>
-              <div style={{display:isLoading?'block':'none'}}>
+              <div style={{display:isLoading?'block':'none',marginTop:10}}>
               <LoadingAnimation/>
               </div>
            

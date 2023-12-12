@@ -11,10 +11,12 @@ text-align: center;
     margin-left: 10vw;
     margin-right: 10vw;
   }
-  
+  .display_container button{
+    justify-self: flex-end;
+  }
   .bikeItem {
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     margin: 5px;
     width: 300px;
@@ -29,6 +31,12 @@ text-align: center;
   .bikeItem h2 {
     font-size: 1.5rem;
     margin: 10px 0;
+  }
+  .Featutes{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    list-style:circle;
   }
   
   .bikeItem h6 {

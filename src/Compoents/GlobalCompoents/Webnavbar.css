@@ -1,9 +1,9 @@
  .web_navbar{
     display: flex;
-    background-color: rgb(252, 22, 23);
-    position: fixed;
+    background: linear-gradient(to right, #170000, #7B060D);
     width: 100%;
     z-index: 1000;
+    height: 80px;
  }
  .web_logo{
     padding: 1vw;
@@ -29,7 +29,7 @@
     text-decoration: none;
 color: white;
 transition: all;
-font-size: 20px;
+font-size: 16px;
  }
  .nav ul li a:hover{
   color: rgb(127, 127, 127);
