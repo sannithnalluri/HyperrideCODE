@@ -1,6 +1,7 @@
 /* DisplayBike.css */
 .Dispaly_image h1{
 text-align: center;
+margin-top: 5vh;
 }
 
 .display_container {
@@ -12,8 +13,9 @@ text-align: center;
     margin-right: 10vw;
   }
   .display_container button{
-    justify-self: flex-end;
+  margin-left: 25%;
   }
+
   .bikeItem {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -31,18 +33,10 @@ text-align: center;
   .bikeItem h2 {
     font-size: 1.5rem;
     margin: 10px 0;
+    text-align: center;
   }
-  .Featutes{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    list-style:circle;
-  }
+
   
-  .bikeItem h6 {
-    font-size: 1rem;
-    margin: 5px 0;
-  }
   
   /* Additional styling can be added as needed */
   

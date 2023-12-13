@@ -57,14 +57,14 @@
 }
 .Date_picking_Section{
     z-index: 10;
-    width: 35vw;
+    width: 24vw;
     background-color: white;
     margin-right: 10vw;
     height: 50vh;
     margin-top: 27vh;
     padding: 2rem;
     border-radius: 10px;
-    margin-left: 10vw;
+    margin-left: 9vw;
 }
 
 .logo_Container{
@@ -88,14 +88,11 @@
     margin-left: 6vw;
 }
 .PickUP_selection_section{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3vh;
     font-family: 'Times New Roman', Times, serif;
 }
 .Date_picking_Section input{
-    width: 12vw;
-    height: 5vh;
+    width: 20vw;
+    height: 1vh;
     font-size: larger;
     border: 2px solid black;
     border-radius: 5px;
@@ -105,15 +102,15 @@
     font-size: 16px;
 }
 .Pickup_Time input{
-    width: 10vw;
+    width: 20vw;
     border-radius:5px;
-    height: 5vh;
+    height: 3vh;
 }
 .Plan_selection_input h2{
     font-family: 'Times New Roman', Times, serif;
 }
 #Pickup_date
-{height: 30px;}
+{height: 24px;}
 
 .Plan_selection_input select{
     width: 17vw;
@@ -123,15 +120,24 @@
     box-shadow: 3px 3px 3px black;
 }
 .Plan_selection_input{
-    margin-left: 2vw;
+    margin-left: .2vw;
+    height: 3vh;
+    width: 20vw;
+}
+#SelectedPlan{
+    width: 21vw;
+    height: 6vh;
+}
+h2{
+    margin-bottom: 2px;
 }
 .Show_avail_Button{
-    margin-left: 10vw;
+    margin-left: 4vw;
 }
 .Show_avail_Button button{
     padding: 10px;
     width: 15vw;
-    margin-top: 6vh;
+    margin-top: 10vh;
     background-color: rgb(225,23,21);
     color: white;
     font-size: 18px;

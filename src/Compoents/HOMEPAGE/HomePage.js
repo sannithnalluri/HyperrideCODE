@@ -145,7 +145,7 @@ const HomePage = () => {
                     </div>
                     <div className='Plan_selection_input'>
                         <h2>Select the Plan</h2>
-                    <select value={selectedPlan} onChange={handleSelectChange}>
+                    <select  id='SelectedPlan' value={selectedPlan} onChange={handleSelectChange}>
                         <option value='None'>None</option>
                          <option value="3">3 Hours 159/-</option>
                          <option value="5">5 Hours 220/-</option>
