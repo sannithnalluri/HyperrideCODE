@@ -44,9 +44,20 @@ function UserDataForm() {
         <MainNavbar/>    
          <div className='userinputpage'>
             <div className='UserForm'>
-      <h2>Please Provide The Details</h2>
+      <h2>Driver Information</h2>
+      <hr id='Driver_margin'/>
       <label>
-        Name:
+       First Name:
+        <input
+          type="text"
+          name="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </label>
+      <label id='last_label'>
+        Last Name:
         <input
           type="text"
           name="name"
@@ -55,8 +66,8 @@ function UserDataForm() {
         />
       </label>
       <br />
-      <label>
-        Email:
+      <label >
+        Email: 
         <input
           type="email"
           name="email"
@@ -64,8 +75,7 @@ function UserDataForm() {
           onChange={handleChange}
         />
       </label>
-      <br />
-      <label>
+      <label id='last_label'>
         Phone:
         <input
           type="text"
@@ -84,7 +94,35 @@ function UserDataForm() {
           onChange={handleChange}
         />
       </label>
+      <label id='last_label'>
+        Zip Code:
+        <input
+          type="text"
+          name="ZipCode"
+          value={formData.location}
+          onChange={handleChange}
+        />
+      </label>
       <br />
+      <label>
+        City:
+        <input
+          type="text"
+          name="City"
+          value={formData.location}
+          onChange={handleChange}
+        />
+      </label>
+      <label id='last_label'>
+        Country:
+        <input
+          type="text"
+          name="Country"
+          value={formData.location}
+          onChange={handleChange}
+        />
+      </label>
+      <br/>
       <label>
         License:
         <input
@@ -94,8 +132,20 @@ function UserDataForm() {
           onChange={handleChange}
         />
       </label>
+      <label id='last_label'>
+        Date Of Birth:
+        <input
+          type="text"
+          name="license"
+          value={formData.license}
+          onChange={handleChange}
+        />
+      </label>
       <br />
-      <button onClick={handleSave}>Save And Next</button>
+      <div id='save_button'>
+      <button  onClick={handleSave}>Save And Next</button>
+      </div>
+      
     </div>
     </div>
     </div>

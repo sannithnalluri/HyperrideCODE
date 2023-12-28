@@ -7,6 +7,7 @@ const Bikebookingpage = () => {
   return (
     <div className='booking_page'>
       <MainNavbar/>
+      <h1 id='order_summary'>Order Summary</h1>
       <div className='Booking_container'>
       <div className='bike_details'>
       <BikeDetails/>

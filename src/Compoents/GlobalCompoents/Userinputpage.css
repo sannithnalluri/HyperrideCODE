@@ -1,13 +1,18 @@
 .UserForm{
-    margin-left: 35vw;
-    padding: 10px;
-    max-width: 30vw;
-    border: 2px black solid;
-    margin-top: 10vh;
+    margin-left: 15vw;
+    padding: 3.5vw;
+    max-width: 70%;
+    border: 1px rgb(146, 146, 146) solid;
     background-color: #fff;
 }
 .userinputpage{
-    padding-top: 15vh;
+    padding-top: 5vh;
+}
+#Driver_margin{
+  margin:10px 0px;
+}
+#last_label{
+  margin-left: 5vw;
 }
   /* Style the form elements */
   label {
@@ -16,15 +21,16 @@
   }
   
   input {
-    width: 80%;
+    width: 30%;
     padding: 10px;
     margin-bottom: 20px; /* Add spacing between input fields */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    min-width:10vw;
   }
   
-  button {
+ #save_button button{
     padding: 10px 20px;
     background-color: #ff5420;
     color: #fff;
@@ -32,11 +38,8 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-  }
-  
-  /* Center the button */
-  button {
-    align-self: flex-end;
+    margin-left: 35%;
+    margin-top: 5vh;
   }
   
   /* Optional: Style the form header */

@@ -65,7 +65,7 @@ function LoginPage() {
         <div style={{display:message?'block':'none'}}>
           <h1>Invalid Username or Password</h1>
         </div>
-        <button type="submit">Login</button>
+        <button id='Submit_button' type="submit">Login</button>
       </form>
     </div>
         </div>

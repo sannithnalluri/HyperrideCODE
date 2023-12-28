@@ -102,6 +102,7 @@ const BookingDetails = () => {
     
     return (
         <div>
+            
             <div className="bookingDetails">
            <h4> Ride-Pick-Date-time:{pickdatetime}</h4>
            <h4> Ride-End-Date-time:{endtime}</h4>
