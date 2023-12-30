@@ -100,9 +100,7 @@
     border-radius:5px;
     height: 3vh;
 }
-.Plan_selection_input h2{
-    font-family: 'Times New Roman', Times, serif;
-}
+
 #Pickup_date
 {height: 24px;}
 
@@ -121,6 +119,7 @@
 #SelectedPlan{
     width: 21vw;
     height: 6vh;
+    font-family: Garetbook;
 }
 h2{
     margin-bottom: 2px;
