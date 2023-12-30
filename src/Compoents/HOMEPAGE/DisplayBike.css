@@ -16,6 +16,14 @@ margin-top: 5vh;
   margin-left: 25%;
   }
 
+  #Book_now_button button{
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 7px;
+  
+
+  }
   .bikeItem {
     border: 1px solid #ccc;
     border-radius: 10px;

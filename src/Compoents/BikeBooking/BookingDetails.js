@@ -1,7 +1,7 @@
 import { useState ,useEffect} from "react";
 import React from 'react';
 import { Link,useNavigate } from "react-router-dom";
-
+import { FaRegCalendarAlt } from "react-icons/fa";
 const BookingDetails = () => {
     const navigate = useNavigate();
     const [isChecked, setIsChecked] = useState(false);
@@ -52,7 +52,7 @@ const BookingDetails = () => {
     const initiatePayment2 = async () => {
         const url = 'https://paymentapi-1-t9346200.deta.app/initiate-payment';
         const transactionDetials = {
-            'amount':1,
+            'amount':cost,
             'userId':bookingRequest.name
         }
     
@@ -104,17 +104,30 @@ const BookingDetails = () => {
         <div>
             
             <div className="bookingDetails">
-           <h4> Ride-Pick-Date-time:{pickdatetime}</h4>
-           <h4> Ride-End-Date-time:{endtime}</h4>
-           <h4>Pickup-location: Madhapur,Hyderabad</h4>
+                <div className="pickuptime">
+                <FaRegCalendarAlt size={30}/> 
+                <div className="ride_pick">
+                <h3> Ride Pick Date_time:</h3>
+                <h4> {pickdatetime}</h4>
+                <h4>Pickup-location: Madhapur,Hyderabad</h4>
+            </div>
+                </div>
+                <div className="pickuptime">
+                <FaRegCalendarAlt size={30}/> 
+                <div className="ride_pick">
+                <h3> Ride Drop Date_time:</h3>
+                <h4> {endtime}</h4>
+                <h4>Pickup-location: Madhapur,Hyderabad</h4>
+            </div>
+                </div>
+               
                
             </div>
             <div className="booking_summary">
-                <h1>Summmary</h1>
+                <h1>Cost</h1>
                 <div>
-                    <h6>Rent Cost:{cost+100}/-</h6>
+                    <h6>Rent Cost:{cost}/-</h6>
                     <h6>Caution Depoist:1000 /-</h6>
-                    <h6>Discount : 25%</h6>
                     <hr/>
                     <h5>TotalAmount : {cost}</h5>
                 </div>

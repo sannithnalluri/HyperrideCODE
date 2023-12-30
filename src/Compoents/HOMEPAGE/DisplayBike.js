@@ -25,7 +25,7 @@ const DisplayBike = ({ bikedata }) => {
                 <h6>{bike.bikeFeatures1}</h6>
                 <h6>{bike.bikeFeatures3}</h6>
               </div> */}
-              <div>
+              <div id='Book_now_button'>
                 <button onClick={()=>{handlebooknow(bike._id)}}>Book Now</button>
                 </div>
             </div>
