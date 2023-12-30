@@ -141,15 +141,23 @@ h2{
 .Show_avail_Button button a{
     color: white;
 }
-@media (max-width:420px) {
-
+@media (max-width:500px) {
+   .Plan_selection_input{
+    margin-top: 2vh;
+    width: 80vw;
+   }
+   #SelectedPlan{
+    width: 80vw;
+   }
   .hero_Section_img{
     display: none;
   }  
   .Date_picking_Section{
-    width: 90vw;
-    height: 80vh;
-    margin: 10vh 5vw;
+    width: 80vw;
+    max-width: 90vw;
+    height: 65vh;
+    margin: 10vh 4vw;
+    padding: 1.5rem;
   }
   .logo_Container{
     width: 80vw;
@@ -177,7 +185,7 @@ h2{
 
 .Show_avail_Button button{
     width: 80vw;
-    margin: 2vh 1vw;
+    margin-top:10vh;
 }
 .Show_avail_Button{
     margin: 2vw;
