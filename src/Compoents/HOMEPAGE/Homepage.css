@@ -140,6 +140,11 @@ h2{
 .Show_avail_Button button a{
     color: white;
 }
+#SelectedPlan option:focus {
+    background-color: #cce5ff; /* Change the background color when selected */
+    color: #000; /* Change the text color when selected */
+    outline: none; /* Remove the default focus outline */
+  }
 @media (max-width:500px) {
    .Plan_selection_input{
     margin-top: 2vh;
@@ -181,6 +186,10 @@ h2{
 .Plan_selection_input select{
     width: 70vw;
 }
+.Plan_selection_input option{
+    width: 90vw;
+    font-size: 50px;
+}
 
 .Show_avail_Button button{
     width: 80vw;
@@ -189,4 +198,9 @@ h2{
 .Show_avail_Button{
     margin: 2vw;
 }
+#SelectedPlan option:focus {
+    background-color: #cce5ff; /* Change the background color when selected */
+    color: #000; /* Change the text color when selected */
+    outline: none; /* Remove the default focus outline */
+  }
 }
