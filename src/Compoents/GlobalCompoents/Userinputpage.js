@@ -2,15 +2,21 @@ import React, { useState, useEffect } from 'react';
 import MainNavbar from './MainNavbar';
 import './Userinputpage.css';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../HOMEPAGE/Footer';
 
 function UserDataForm() {
     const navigate = useNavigate();
   const initialFormData = {
     name: '',
+    lastname:'',
     email: '',
     phone: '',
     location: '',
     license: '',
+    pincode:'',
+    city:'',
+    country:'',
+    dateofbirth:"",
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -46,8 +52,9 @@ function UserDataForm() {
             <div className='UserForm'>
       <h2>Driver Information</h2>
       <hr id='Driver_margin'/>
+      <div className='input_block'>
       <label>
-       First Name:
+       First Name:<br/>
         <input
           type="text"
           name="name"
@@ -56,27 +63,30 @@ function UserDataForm() {
           onChange={handleChange}
         />
       </label>
+      <br id='break'/>
       <label id='last_label'>
-        Last Name:
+        Last Name:<br/>
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="lastname"
+          value={formData.lastname}
           onChange={handleChange}
         />
       </label>
-      <br />
-      <label >
-        Email: 
+      </div>
+      <div className='input_block'>
+      <label>
+       Email:<br/>
         <input
-          type="email"
+          type="text"
           name="email"
+          required
           value={formData.email}
           onChange={handleChange}
         />
       </label>
       <label id='last_label'>
-        Phone:
+        Phone:<br/>
         <input
           type="text"
           name="phone"
@@ -84,63 +94,78 @@ function UserDataForm() {
           onChange={handleChange}
         />
       </label>
-      <br />
+      </div>
+
+
+
+      <div className='input_block'>
       <label>
-        Location:
+       Location:<br/>
         <input
           type="text"
           name="location"
+          required
           value={formData.location}
           onChange={handleChange}
         />
       </label>
       <label id='last_label'>
-        Zip Code:
+        Pin Code:<br/>
         <input
           type="text"
-          name="ZipCode"
-          value={formData.location}
+          name="pincode"
+          value={formData.pincode}
           onChange={handleChange}
         />
       </label>
-      <br />
+      </div>
+      <div className='input_block'>
       <label>
-        City:
+       City:<br/>
         <input
           type="text"
-          name="City"
-          value={formData.location}
+          name="city"
+          required
+          value={formData.city}
           onChange={handleChange}
         />
       </label>
       <label id='last_label'>
-        Country:
+        Country:<br/>
         <input
           type="text"
-          name="Country"
-          value={formData.location}
+          name="country"
+          value={formData.country}
           onChange={handleChange}
         />
       </label>
-      <br/>
+      </div>
+      <div className='input_block'>
       <label>
-        License:
+       License:<br/>
         <input
           type="text"
           name="license"
+          required
           value={formData.license}
           onChange={handleChange}
         />
       </label>
       <label id='last_label'>
-        Date Of Birth:
+      Date Of Birth:<br/>
         <input
           type="text"
-          name="license"
-          value={formData.license}
+          name="dateofbirth"
+          value={formData.dateofbirth}
           onChange={handleChange}
         />
       </label>
+      </div>
+      
+   
+     
+    
+
       <br />
       <div id='save_button'>
       <button  onClick={handleSave}>Save And Next</button>
@@ -148,6 +173,7 @@ function UserDataForm() {
       
     </div>
     </div>
+    <Footer/>
     </div>
    
   );

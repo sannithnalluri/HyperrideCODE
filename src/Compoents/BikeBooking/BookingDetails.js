@@ -2,6 +2,10 @@ import { useState ,useEffect} from "react";
 import React from 'react';
 import { Link,useNavigate } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { FaRegCircle } from "react-icons/fa";
+import { IoLocationOutline } from "react-icons/io5";
+import { FaCircle } from "react-icons/fa";
+import { MdCurrencyRupee } from "react-icons/md";
 const BookingDetails = () => {
     const navigate = useNavigate();
     const [isChecked, setIsChecked] = useState(false);
@@ -52,7 +56,7 @@ const BookingDetails = () => {
     const initiatePayment2 = async () => {
         const url = 'https://paymentapi-1-t9346200.deta.app/initiate-payment';
         const transactionDetials = {
-            'amount':cost,
+            'amount':1,
             'userId':bookingRequest.name
         }
     
@@ -105,31 +109,53 @@ const BookingDetails = () => {
             
             <div className="bookingDetails">
                 <div className="pickuptime">
-                <FaRegCalendarAlt size={30}/> 
-                <div className="ride_pick">
-                <h3> Ride Pick Date_time:</h3>
-                <h4> {pickdatetime}</h4>
-                <h4>Pickup-location: Madhapur,Hyderabad</h4>
-            </div>
-                </div>
-                <div className="pickuptime">
-                <FaRegCalendarAlt size={30}/> 
-                <div className="ride_pick">
-                <h3> Ride Drop Date_time:</h3>
-                <h4> {endtime}</h4>
-                <h4>Pickup-location: Madhapur,Hyderabad</h4>
-            </div>
-                </div>
+                    <div style={{display:'flex'}}>
+                    <FaRegCircle size={30}/> 
+                     <h1 style={{marginLeft:10}}>Pickup</h1>
+                    </div>
                
+                <div className="ride_pick">
+                <div style={{display:'flex'}}>
+                    <FaRegCalendarAlt size={20}/>  <h3 style={{marginLeft:10}}>Date_time:</h3>
+                    <h4> {pickdatetime}</h4>
+                    </div>
+                    <div style={{display:'flex'}}>
+                    <IoLocationOutline size={20}/>  <h3 style={{marginLeft:10}}>  <h4>location: Madhapur,Hyderabad</h4></h3>
+                    </div>
+                </div>
+                </div>
+
+
+                <div className="pickuptime" style={{marginTop:"4vh"}}>
+                    <div style={{display:'flex'}}>
+                    <FaCircle size={30}/> 
+                     <h1 style={{marginLeft:10}}>Drop Off</h1>
+                    </div>
                
+                <div className="ride_pick">
+                <div style={{display:'flex'}}>
+                    <FaRegCalendarAlt size={20}/>  <h3 style={{marginLeft:10}}>Date_time:</h3>
+                    <h4> {endtime}</h4>
+                    </div>
+                    <div style={{display:'flex'}}>
+                    <IoLocationOutline size={20}/>  <h3 style={{marginLeft:10}}>  <h4>location: Madhapur,Hyderabad</h4></h3>
+                    </div>
+                </div>
+                </div>
+                
+
             </div>
             <div className="booking_summary">
-                <h1>Cost</h1>
+                <div style={{display:'flex'}}>
+                    <h1>Cost</h1>
+                    <MdCurrencyRupee  style={{marginTop:9}} size={27}/>
+                </div>
+                
                 <div>
                     <h6>Rent Cost:{cost}/-</h6>
-                    <h6>Caution Depoist:1000 /-</h6>
+                    <h6>Caution Depoist:1000 /-</h6><p style={{color:"blueviolet"}}>(Refundable)</p>
                     <hr/>
-                    <h5>TotalAmount : {cost}</h5>
+                    <h4>TotalAmount : {cost}</h4>
                 </div>
             </div>
             <div className="Checkbox">
@@ -140,9 +166,12 @@ const BookingDetails = () => {
                 <label><Link to='/terms'> Accept All Terms and Condition </Link></label>
             </div>
            <div className="booknowbutton">
-            <button onClick={initiatePayment2} style={{color:isChecked?'':'orange'}} disabled={!isChecked}>Pay Now</button>
+            <button onClick={initiatePayment2} style={{color:isChecked?'':'yellow'}} disabled={!isChecked}>Pay Now</button>
             
            </div>
+           
+           
+          
         </div>
     );
 }

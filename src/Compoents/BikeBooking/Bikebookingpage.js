@@ -3,6 +3,7 @@ import './Bikebooking.css'
 import BikeDetails from './Bike_details';
 import BookingDetails from './BookingDetails';
 import MainNavbar from '../GlobalCompoents/MainNavbar';
+import Footer from '../HOMEPAGE/Footer';
 const Bikebookingpage = () => {
   return (
     <div className='booking_page'>
@@ -15,8 +16,9 @@ const Bikebookingpage = () => {
       <div className='Booking_detials'>
       <BookingDetails/>
       </div>
+      
       </div>
-
+      <Footer/>
     </div>
   );
 }

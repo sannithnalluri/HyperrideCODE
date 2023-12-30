@@ -11,22 +11,21 @@
     text-align: center;
 }
 .Pricing h1{
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: 2px;
-    font-family: 'Times New Roman', Times, serif;
 }
 .Hourly{
     border: 2px black solid;
-    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
-    margin: 3vh 5vw;
-    height: 50vh;
+    box-shadow: 2px 2px 2px 2px rgb(140, 140, 140);
+    margin: 3vh 2.5vw;
+    height: 40vh;
     border-radius: 10px;
 }
 .Hourly:hover{
     box-shadow:2px 2px 2px 2px rgb(83, 83, 83);
 }
 .Hourly h2{
-    font-size: 35px;
+    font-size: 25px;
     background-color: rgb(221,21,23);
     color: white;
     padding: 10px;
@@ -36,7 +35,7 @@
    
 }
 .Hourly h6{
-    font-size: 20px;
+    font-size: 18px;
     margin: 3vh 3vw;
 }
 .Pric_Line{

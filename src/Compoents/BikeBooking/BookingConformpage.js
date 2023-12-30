@@ -55,23 +55,26 @@ const BookingConformpage = () => {
   return (
     <div className='BookingStatusPage'>
       <MainNavbar />
-      <h1>Payment Status</h1>
+      <h1 style={{textAlign:'center',fontSize:40,marginTop:30}}>Payment Status</h1>
 
       {paymentstatus === 'SUCCESS' ? (
         <div className='BookingStatus_container'>
           <h1>Payment Status</h1>
           <h3>Transaction Id: {Transactionid}</h3>
-          <h3>Transaction Status: SUCCESSFUL</h3>
-          <h3>Amount: {amount / 100}</h3>
+          <h3>Transaction Status: <h3 style={{color:'green'}}>SUCCESSFUL</h3></h3>
+          <h3 >Amount: {amount / 100}</h3>
 
           <h2>Take Screen Shot Future Requirement</h2>
+          <p style={{color:"Red"}}>Shortly you receive the conformation message form Hypride</p>
+  
         </div>
       ) : (
         <div className='BookingStatus_container'>
           <h1>Payment Status</h1>
           <h3>Transaction Id: {Transactionid}</h3>
           <h3>Transaction Status: Initiate</h3>
-          <h2>Checking Payment Status <img src={require('../Assests/loading.gif')} alt="loading" /></h2>
+          <h2>Checking Payment Status  </h2>
+          <div class="loader"></div>
           <p>An external Payment page is opened... Please complete your payment.</p>
         </div>
       )}

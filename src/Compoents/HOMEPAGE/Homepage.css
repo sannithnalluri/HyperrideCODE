@@ -1,6 +1,6 @@
 .hero_section{
     display: flex;
-   background-image:url('../Assests/background.png');
+   background-image:url('../Assests/hyprridenew.png');
     height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,7 +26,6 @@
     width: 30vw;
     margin-left: 5vw;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
 }
 .hero_Section_img p{
     font-size: 16px;
@@ -43,9 +42,6 @@
     color: rgb(255, 255, 255);
     font-size: 65px;
     letter-spacing: 5px;
-    font-family:'Arial Narrow', Arial, sans-serif;
-    
-    
 }
 
 .hero_Section_img img{
@@ -87,9 +83,7 @@
     background-color: white;
     margin-left: 6vw;
 }
-.PickUP_selection_section{
-    font-family: 'Times New Roman', Times, serif;
-}
+
 .Date_picking_Section input{
     width: 20vw;
     height: 1vh;

@@ -14,13 +14,13 @@ const Contactuspage = () => {
             <h1>Contact Us</h1>
             <div className="contact-info">
                 <p className="contact-detail">
-                    <span className="contact-label">Email:</span> contact@example.com
+                    <span className="contact-label">Email:</span> Hyprride@gmail.com
                 </p>
                 <p className="contact-detail">
-                    <span className="contact-label">Phone:</span> +1 (123) 456-7890
+                    <span className="contact-label">Phone:</span> +91 7032887133
                 </p>
                 <p className="contact-detail">
-                    <span className="contact-label">Address:</span> 123 Main Street, City, Country
+                    <span className="contact-label">Address:</span> Beside Neera Residency,Pillar No C1762,Vittal Rao Nagar,Madhapur,Hyderabad
                 </p>
             </div>
         </div>

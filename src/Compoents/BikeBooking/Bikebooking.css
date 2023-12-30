@@ -1,5 +1,5 @@
 .Booking_container{
-    padding-top: 4%;
+    padding-top: 2%;
     display: flex;
     margin: 0px 10vw;
     justify-content: space-around;
@@ -13,6 +13,8 @@
 }.bike_information h1{
     background-color: red;
     color: white;
+    border-radius: 10px;
+    text-align: center;
 }
 .Bike_features ul{
     display: flex;
@@ -26,12 +28,12 @@
 .Bike_features{
     padding: 20px;
     border: 1px black solid;
-    box-shadow: 0px 0px 1px gray;
+    box-shadow: 0px 0px 1px rgb(234, 234, 234);
 }
 .bookingDetails{
     padding: 20px;
     border: 1px black solid;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(253, 253, 253);
     box-shadow: 0px 0px 10px gray;
     border-radius: 10px;
 }
@@ -41,9 +43,9 @@
 .booking_summary{
     border: 1px black solid;
     padding: 20px;
-    margin-top: 20%;
-    background-color: rgb(238, 238, 238);
-    box-shadow: 0px 0px 10px gray;
+    margin-top: 4%;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0px 0px 10px rgb(241, 241, 241);
     border-radius: 10px;
 }
 .booking_summary h6{
@@ -51,19 +53,21 @@
 }
 .Checkbox input{
     width: 10%;
+    min-width: 1px;
 }
-.booknowbutton button:hover{
-    color: rgb(0, 0, 0);
-    background-color: white;
-
+.booknowbutton button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 #order_summary{
     font-size: 50px;
     text-align: center;
 }
-.pickuptime{
-    display: flex;
-}
+
 .ride_pick{
     margin-left: 10px;
 }
