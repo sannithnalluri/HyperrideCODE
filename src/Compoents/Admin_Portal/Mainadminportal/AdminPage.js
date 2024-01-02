@@ -31,11 +31,15 @@ const AdminPage = () => {
             </div>
             <div style={{display:user?'block':'none'}}>
             <MainNavbar/>
-            <h1>AdminPage</h1>
+            <div style={{display:'flex'}}>
+            <h1 id='adminpageheading'>AdminPage</h1>
+            <div className='Logout_btn'>
+            <button onClick={logout}>logout</button>
+            </div>
+            </div>
+          
             <div className='Admin_portal'>
-                <div className='Logout_btn'>
-                <button onClick={logout}>logout</button>
-                </div>
+                
              
                 <div  className='Admin_section'>
                     <button
@@ -46,9 +50,9 @@ const AdminPage = () => {
                     </button>
                     <div className={`admin_nav ${showMobileNav ? 'show-mobile' : ''}`}>
                     <h1 onClick={handleBookingClick} style={{color:BookignRecords?'orange':''}}>Booking records</h1>
-                        <hr/>
+                     
                         <h1 onClick={handleBikeClick} style={{color:BikeRecords?'orange':''}}>Bike records</h1>
-                        <hr/>
+                    
                     </div>
                     <div className="admim_working_profile">
         {/* Your content here */}

@@ -41,7 +41,7 @@
   /* BikeDetailsPage.css */
 
 .BikeDetailsPage {
-    width: 60vw; /* Fixed width for the container */
+    width: 90vw; /* Fixed width for the container */
     height: 60vh; /* Maximum height for the container (adjust as needed) */
     overflow: auto; /* Add scrollbars if content exceeds the container height */
     padding: 20px;
@@ -75,4 +75,40 @@
   tr:hover {
     background-color: #ddd;
   }
-  
+  #add_bike_button{
+    width: 200px;
+    padding: 10px;
+    color: red;
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  .Delete_bike_container input{
+    width: 30%;
+  }
+  .Delete_bike_container button{
+    width: 200px;
+    padding: 10px;
+    color: red;
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  #holdButton{
+    width: 200px;
+    padding: 10px;
+    color: red;
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+
+  }
+  #Release_bike{
+    width: 200px;
+    padding: 10px;
+    color: red;
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+
+  }

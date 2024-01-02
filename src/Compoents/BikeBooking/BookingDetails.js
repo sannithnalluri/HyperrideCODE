@@ -32,31 +32,12 @@ const BookingDetails = () => {
         cost:cost.toString(),    
     }
    
-    // const initiatePayment = async () => {
-    //   try {
-    //     const formDataString = JSON.stringify(formData);
-    //     sessionStorage.setItem('bookingdetials', formDataString);
-    //     const transactionDetials = {
-    //         'amount':cost,
-    //         'userId':bookingRequest.name
-    //     }
-    //     console.log(transactionDetials)
-    //     const response = await axios.post('https://paymentapi-1-t9346200.deta.app/initiate-payment',transactionDetials);
-    //     console.log(response.data.pay_page_url)
-    //     console.log(response.data.Transaction_id)
-    //     sessionStorage.setItem('Transaction_id',response.data.Transaction_id) 
-    //     window.open(response.data.pay_page_url)
-    //     navigate('/BookingStatus')    
-    //   } catch (error) {
-    //     console.error(error);
-       
-    //   }
-    // };
+   
     
     const initiatePayment2 = async () => {
         const url = 'https://paymentapi-1-t9346200.deta.app/initiate-payment';
         const transactionDetials = {
-            'amount':1,
+            'amount':cost,
             'userId':bookingRequest.name
         }
     

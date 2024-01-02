@@ -27,7 +27,7 @@ const ReleaseBike = () => {
         <label>Bike_id:</label>
         <input type="text" value={bikeId} onChange={handleBikeIdChange} />
       </div>
-      <button onClick={handleReleaseBike}>Hold Bike</button>
+      <button   id='Release_bike' onClick={handleReleaseBike}>Release_Bike</button>
       {message && <p>{message}</p>}
         </div>
     );

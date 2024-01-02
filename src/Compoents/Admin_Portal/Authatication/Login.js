@@ -20,6 +20,7 @@ function LoginPage() {
     };
 
     try {
+      login(true)
       // Make the POST request to your API endpoint
       const response = await axios.post('https://hyperwave-1-c8519996.deta.app/login', userData);
 

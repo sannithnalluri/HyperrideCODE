@@ -77,7 +77,7 @@ const Addbike = () => {
          <label htmlFor="bikeImage">Bike Image:</label>
         <input type="file" id="bikeImage" name="bikeImage" onChange={handleImageChange} />
       </div>
-      <button type="submit">Submit</button>
+      <button id='add_bike_button' type="submit">Submit</button>
     </form>
 
             </div>

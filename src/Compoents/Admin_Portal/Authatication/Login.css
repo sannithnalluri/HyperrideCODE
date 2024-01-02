@@ -1,10 +1,10 @@
 /* LoginPage Container */
 .login-container {
-    background-color: rgb(221, 21, 23);
+    background-color: rgb(255, 0, 4);
     color: white;
     padding: 20px;
     border-radius: 5px;
-    width: 300px;
+    width: 500px;
     margin: 0 auto;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -17,7 +17,7 @@
   }
   
   .input-container {
-    margin: 10px 0;
+    margin: 10px 2vw;
   }
   
   label {
@@ -31,18 +31,21 @@
     margin-top: 5px;
   }
   
-  #Submit_button button {
-    background-color: white;
+  #Submit_button  {
+    background-color: rgb(255, 255, 255);
     color: rgb(221, 21, 23);
     border: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: bold;
+    width: 100px;
     cursor: pointer;
+    margin-left: 35%;
+    
   }
   
   button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(173, 51, 51, 0.8);
 
   }
   .login_page{

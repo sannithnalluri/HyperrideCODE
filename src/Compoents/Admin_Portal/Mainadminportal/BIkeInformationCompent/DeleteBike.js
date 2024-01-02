@@ -36,7 +36,7 @@ const DeleteBike = () => {
         <div className='Delete_bike_container'>
             <h1>Delete Bike</h1>
             <label>Bike ID</label><br />
-            <input value={bikeid} onChange={handleInputChange} type='text' />
+            <input value={bikeid}  onChange={handleInputChange} type='text' />
             <div>
                 <button onClick={handleDeleteBike}>Delete Bike</button>
             </div>

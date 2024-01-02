@@ -23,9 +23,7 @@ const BookingRecords = () => {
   }, []);
     return (
         <div className='Booking_records'>
-            <h1>BikeBooking records</h1>
             <div className="table-panel">
-      <h2>Data Table</h2>
       <div className="table-container">
         <table>
           <thead>
